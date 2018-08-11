@@ -1,0 +1,49 @@
+.logo {
+    .circle {
+      width: 50px;
+      height: 50px;
+      background-color: #7F2121;
+      border-radius: 50%;
+      text-align: center;
+      margin-top: 5px;
+      .text {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+      }
+    }
+  }
+
+.profile {
+    .tab-content {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+    }
+    
+    .nav-tabs {
+        margin-bottom: 0;
+    }
+}
+
+.dataTables_wrapper{
+    .dataTables_paginate {
+        .paginate_button.current {
+            background: #2196f3;
+        }
+        .paginate_button.current:hover {
+            background: #2196f3;
+        }           
+    }
+}
+
+.form-button-delete,
+.form-button-delete:hover {
+    text-decoration: none;
+}
+.btn:focus,
+.btn:active {
+    text-decoration: none;
+}

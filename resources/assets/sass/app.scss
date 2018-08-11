@@ -1,0 +1,23 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Override Boostrap variables
+@import "bootstrap-variables";
+
+// Simple Line Icons
+@import "../../../node_modules/simple-line-icons/scss/simple-line-icons";
+
+// Bootstrap
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+
+// Variables
+@import 'variables';
+
+@import 'header';
+
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}

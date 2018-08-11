@@ -1,0 +1,26 @@
+{
+    "name": "onetoefoot/notes",
+    "description": "Notes",
+    "authors": [
+        {
+            "name": "Jody Castro",
+            "email": "jcandothers@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Onetoefoot\\Notes\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Onetoefoot\\Notes\\NotesServiceProvider"
+            ],
+            "aliases": {
+                "Notes": "Onetoefoot\\Notes\\NotesFacade"
+            }
+        }
+    }
+}
