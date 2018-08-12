@@ -8,7 +8,7 @@
     <div class="col-md-12">
         <div class="bgc-white bd bdrs-3 p-20 mB-20">
         <h4 class="c-grey-900 mB-20">
-            <i class="ti-user"></i> {{ __('User Administration')}} 
+            <i class="ti-user"></i> {{ __('Users')}} 
             <a href="{{ route('roles.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('Roles')}}</a>
             <a href="{{ route('permissions.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('Permissions')}}</a>
         </h4>
@@ -35,7 +35,6 @@
             <tbody>
                 @foreach ($users as $user)
                 <tr>
-
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->created_at->format('F d, Y h:ia') }}</td>

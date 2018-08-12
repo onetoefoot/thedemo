@@ -19,7 +19,7 @@
                                 @include('includes.forms.field-text', [
                                     'fieldName' => 'name', 'displayName' => __('Name'),
                                     'iconClass' => 'ti-key', 'placeholder' => __('Role Name'),
-                                    'old' => old('name'), 'required' => $required
+                                    'old' => old('name'), 'required' => 'required'
                                 ])
                                 @include('includes.forms.validation', ['fieldname' => 'name'])
                             </div>
@@ -30,15 +30,14 @@
                                         @foreach ($permissions as $permission)
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                            {{ Form::checkbox('permissions[]', $permission->id, false, ['class' => 'form-check-input'] ) }}
-                                            {{ ucfirst($permission->name) }}
+                                                <input class="form-check-input" name="permissions[]" type="checkbox" 
+                                                    value="{{$permission->id}}"> {{ ucfirst($permission->name) }}
                                             </label>
                                         </div>
                                         @endforeach
                                     </div>
                                 </div>
                             </fieldset>
-
 
                             <button type="submit" class="btn btn-primary">{{ __('Add Role') }}</button>
                         </form>

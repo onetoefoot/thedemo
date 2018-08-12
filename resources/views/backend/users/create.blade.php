@@ -16,25 +16,20 @@
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                                 <label for="inputName">{{ __('Name') }}</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputPassword"><i class="ti-user"></i><span>
-                                    </div>
-                                    <input type="text" class="form-control" id="inputName" placeholder="John Doe"
-                                        name="name" value="{{ old('name') }}" required>
-                                </div>
-                                    @include('includes.forms.validation', ['fieldname' => 'name'])
+                                @include('includes.forms.field-text', [
+                                    'fieldName' => 'name', 'displayName' => __('Name'),
+                                    'iconClass' => 'ti-key', 'placeholder' => __('John Doe'),
+                                    'old' => old('name'), 'required' => 'required'
+                                ])
+                                @include('includes.forms.validation', ['fieldname' => 'name'])
                             </div>
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="inputEmail">{{ __('E-Mail Address') }}</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputEmail"><i class="ti-email"></i></span>
-                                    </div>
-                                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email"
-                                        name="email" value="{{ old('email') }}" required>
-                                </div>
-                                    @include('includes.forms.validation', ['fieldname' => 'email'])
+                                @include('includes.forms.field-text', [
+                                    'fieldName' => 'email', 'displayName' => __('E-Mail Address'),
+                                    'iconClass' => 'ti-email', 'placeholder' => __('John.Doe@domain.com'),
+                                    'old' => old('email'), 'required' => 'required'
+                                ])
+                                @include('includes.forms.validation', ['fieldname' => 'email'])
                             </div>
 
                             <fieldset class="form-group">
@@ -44,8 +39,8 @@
                                         @foreach ($roles as $role)
                                         <div class="form-check">
                                             <label class="form-check-label">
-                                            {{ Form::checkbox('roles[]', $role->id, false, ['class' => 'form-check-input'] ) }}
-                                            {{ ucfirst($role->name) }}
+                                                <input class="form-check-input" name="roles[]" type="checkbox" 
+                                                        value="{{$role->id}}"> {{ ucfirst($role->name) }}
                                             </label>
                                         </div>
                                         @endforeach
@@ -54,26 +49,20 @@
                             </fieldset>
 
                             <div class="form-group">
-                                <label class="text-normal text-dark">{{ __('Password') }}</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputPassword"><i class="ti-key"></i><span>
-                                    </div>
-                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
-                                        name="password" required>
-                                </div>
-                                    @include('includes.forms.validation', ['fieldname' => 'password'])
+                                @include('includes.forms.field-text', [
+                                    'fieldName' => 'password', 'displayName' => __('Password'),
+                                    'iconClass' => 'ti-key', 'placeholder' => '',
+                                    'old' => '', 'required' => 'required'
+                                ])
+                                @include('includes.forms.validation', ['fieldname' => 'password'])
                             </div>
                             <div class="form-group">
-                                <label class="text-normal text-dark">{{ __('Confirm Password') }}</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputPasswordConfirm"><i class="ti-key"></i><span>
-                                    </div>
-                                    <input id="password-confirm" type="password" class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}"
-                                        name="password_confirmation" required>
-                                </div>
-                                    @include('includes.forms.validation', ['fieldname' => 'password_confirmation'])
+                                @include('includes.forms.field-text', [
+                                    'fieldName' => 'password_confirmation', 'displayName' => __('Confirm Password'),
+                                    'iconClass' => 'ti-key', 'placeholder' => '',
+                                    'old' => '', 'required' => 'required'
+                                ])
+                                @include('includes.forms.validation', ['fieldname' => 'password_confirmation'])
                             </div>
 
                             <button type="submit" class="btn btn-primary">{{ __('Add User') }}</button>

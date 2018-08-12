@@ -15,26 +15,20 @@
                             {{ method_field('PATCH') }}
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label for="inputName">{{ __('Name') }}</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputPassword"><i class="ti-user"></i><span>
-                                    </div>
-                                    <input type="text" class="form-control" id="inputName" placeholder="John Doe"
-                                        name="name" value="{{ old('name', $user->name) }}" required>
-                                </div>
-                                    @include('includes.forms.validation', ['fieldname' => 'name'])
+                                @include('includes.forms.field-text', [
+                                    'fieldName' => 'name', 'displayName' => __('Name'),
+                                    'iconClass' => 'ti-key', 'placeholder' => __('John Doe'),
+                                    'old' => old('name', $user->name), 'required' => 'required'
+                                ])
+                                @include('includes.forms.validation', ['fieldname' => 'name'])
                             </div>
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="inputEmail">{{ __('E-Mail Address') }}</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputEmail"><i class="ti-email"></i></span>
-                                    </div>
-                                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email"
-                                        name="email" value="{{ old('email', $user->email) }}" required>
-                                </div>
-                                    @include('includes.forms.validation', ['fieldname' => 'email'])
+                                @include('includes.forms.field-text', [
+                                    'fieldName' => 'email', 'displayName' => __('E-Mail Address'),
+                                    'iconClass' => 'ti-email', 'placeholder' => __('John.Doe@domain.com'),
+                                    'old' => old('email', $user->email), 'required' => 'required'
+                                ])
+                                @include('includes.forms.validation', ['fieldname' => 'email'])
                             </div>
 
                             <fieldset class="form-group">
@@ -57,27 +51,21 @@
                                 </div>
                             </fieldset>
 
-                            <div class="form-group">
-                                <label for="inputPassword">{{ __('Password') }}</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputPassword"><i class="ti-key"></i><span>
-                                    </div>
-                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
-                                        name="password">
-                                </div>
-                                    @include('includes.forms.validation', ['fieldname' => 'password'])
+                            <div class="form-group{{ $errors->has('password') ? ' is-invalid' : '' }}">
+                                @include('includes.forms.field-text', [
+                                    'fieldName' => 'password', 'displayName' => __('Password'),
+                                    'iconClass' => 'ti-key', 'placeholder' => '',
+                                    'old' => '', 'required' => 'required'
+                                ])
+                                @include('includes.forms.validation', ['fieldname' => 'password'])
                             </div>
-                            <div class="form-group">
-                                <label for="inputPasswordConfirm">{{ __('Confirm Password') }}</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputPasswordConfirm"><i class="ti-key"></i><span>
-                                    </div>
-                                    <input id="password-confirm" type="password" class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}"
-                                        name="password_confirmation">
-                                </div>
-                                    @include('includes.forms.validation', ['fieldname' => 'password_confirmation'])
+                            <div class="form-group{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}">
+                                @include('includes.forms.field-text', [
+                                    'fieldName' => 'password_confirmation', 'displayName' => __('Confirm Password'),
+                                    'iconClass' => 'ti-key', 'placeholder' => '',
+                                    'old' => '', 'required' => 'required'
+                                ])
+                                @include('includes.forms.validation', ['fieldname' => 'password_confirmation'])
                             </div>
 
                             <button type="submit" class="btn btn-primary">{{ __('Save Changes') }}</button>

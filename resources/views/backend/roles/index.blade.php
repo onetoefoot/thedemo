@@ -28,13 +28,10 @@
                     <th>{{__('Operation')}}</th>
                 </tr>
             </tfoot>
-
             <tbody>
                 @foreach ($roles as $role)
                 <tr>
-
                     <td>{{ $role->name }}</td>
-
                     <td>{{  $role->permissions()->pluck('name')->implode(' ') }}</td>{{-- Retrieve array of permissions associated to a role and convert to string --}}
                     <td>
                         @include('includes.forms.edit-record', [

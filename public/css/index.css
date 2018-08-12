@@ -82547,3 +82547,7 @@ button:focus {
   -webkit-box-shadow: none !important;
 }
 
+legend {
+  font-size: 1em;
+}
+

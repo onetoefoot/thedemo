@@ -1,32 +1,52 @@
 @extends('backend.layouts.app')
 
-@section('title', '| Edit Role')
+@section('title', '| ' . __('Edit Permission') )
 
 @section('content')
+            <div class="container masonry-item col-md-8 profile">
+                <div class="bgc-white p-20 bd">
+                    <h4 class="c-grey-900">
+                        <i class="ti-key"></i> {{ __('Edit ') }} ( {{$permission->name}} )
+                        <a href="{{ route('permissions.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('Cancel')}}</a>
+                    </h4>
+                    <div class="mT-30">
+                        <form method="POST" action="{{ route('permissions.update', ['id' => $permission->id])}}" accept-charset="UTF-8">
+                            {{ csrf_field() }}
+                            {{ method_field('PATCH') }}
 
-<div class='col-lg-4 col-lg-offset-4'>
-    <h1><i class='fa fa-key'></i> Edit Role: {{$role->name}}</h1>
-    <hr>
-    {{-- @include ('errors.list')
- --}}
-    {{ Form::model($role, array('route' => array('roles.update', $role->id), 'method' => 'PUT')) }}
+                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                                @include('includes.forms.field-text', [
+                                    'fieldName' => 'name', 'displayName' => __('Name'),
+                                    'iconClass' => 'ti-key', 'placeholder' => __('Permission Name'),
+                                    'old' => old('name', $permission->name), 'required' => 'required'
+                                ])
+                                @include('includes.forms.validation', ['fieldname' => 'name'])
+                            </div>
 
-    <div class="form-group">
-        {{ Form::label('name', 'Role Name') }}
-        {{ Form::text('name', null, array('class' => 'form-control')) }}
-    </div>
+                            <fieldset class="form-group">
+                                <div class="row">
+                                <legend class="col-form-legend col-sm-2">Assign Roles</legend>
+                                    <div class="col-sm-10">
+                                        @foreach ($roles as $role)
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" 
+                                                        @if(is_array($role->permissions) && in_array($permission->id, $role->permissions))
+                                                            checked="checked"
+                                                        @endif
+                                                    name="roles[]" type="checkbox" value="{{$role->id}}"> {{ ucfirst($role->name) }}
 
-    <h5><b>Assign Permissions</b></h5>
-    @foreach ($permissions as $permission)
+                                            </label>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </fieldset>
 
-        {{Form::checkbox('permissions[]',  $permission->id, $role->permissions ) }}
-        {{Form::label($permission->name, ucfirst($permission->name)) }}<br>
-
-    @endforeach
-    <br>
-    {{ Form::submit('Edit', array('class' => 'btn btn-primary')) }}
-
-    {{ Form::close() }}    
-</div>
+                            <button type="submit" class="btn btn-primary">{{ __('Save Changes') }}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
 @endsection

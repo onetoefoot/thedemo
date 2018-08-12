@@ -92,8 +92,9 @@ class PermissionController extends Controller {
     */
     public function edit($id) {
         $permission = Permission::findOrFail($id);
+        $roles = Role::all(); //Get all roles
 
-        return view('backend.permissions.edit', compact('permission'));
+        return view('backend.permissions.edit', compact('permission', 'roles'));
     }
 
     /**
