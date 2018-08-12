@@ -23,7 +23,7 @@
                                     <input type="text" class="form-control" id="inputName" placeholder="John Doe"
                                         name="name" value="{{ old('name') }}" required>
                                 </div>
-                                    @include('includes.validation', ['fieldname' => 'name'])
+                                    @include('includes.forms.validation', ['fieldname' => 'name'])
                             </div>
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label for="inputEmail">{{ __('E-Mail Address') }}</label>
@@ -34,7 +34,7 @@
                                     <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email"
                                         name="email" value="{{ old('email') }}" required>
                                 </div>
-                                    @include('includes.validation', ['fieldname' => 'email'])
+                                    @include('includes.forms.validation', ['fieldname' => 'email'])
                             </div>
 
                             <fieldset class="form-group">
@@ -62,7 +62,7 @@
                                     <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
                                         name="password" required>
                                 </div>
-                                    @include('includes.validation', ['fieldname' => 'password'])
+                                    @include('includes.forms.validation', ['fieldname' => 'password'])
                             </div>
                             <div class="form-group">
                                 <label class="text-normal text-dark">{{ __('Confirm Password') }}</label>
@@ -73,7 +73,7 @@
                                     <input id="password-confirm" type="password" class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}"
                                         name="password_confirmation" required>
                                 </div>
-                                    @include('includes.validation', ['fieldname' => 'password_confirmation'])
+                                    @include('includes.forms.validation', ['fieldname' => 'password_confirmation'])
                             </div>
 
                             <button type="submit" class="btn btn-primary">{{ __('Add User') }}</button>

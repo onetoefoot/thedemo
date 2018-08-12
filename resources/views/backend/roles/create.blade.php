@@ -1,36 +1,50 @@
 @extends('backend.layouts.app')
 
-@section('title', '| Add Role')
+@section('title', '| ' . __('Add Role') )
 
 @section('content')
 
-<div class='col-lg-4 col-lg-offset-4'>
+            <div class="container masonry-item col-md-8 profile">
+                <div class="bgc-white p-20 bd">
+                    <h4 class="c-grey-900">
+                        <i class="ti-key"></i> {{ __('Add Role') }} 
+                        <a href="{{ route('roles.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('Cancel')}}</a>
+                    </h4>
+                    <div class="mT-30">
 
-    <h1><i class='fa fa-key'></i> Add Role</h1>
-    <hr>
-    {{-- @include ('errors.list') --}}
+                        <form method="POST" action=" {{route('roles.store')}} " accept-charset="UTF-8">
+                                {{ csrf_field() }}
 
-    {{ Form::open(array('url' => 'roles')) }}
+                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                                @include('includes.forms.field-text', [
+                                    'fieldName' => 'name', 'displayName' => __('Name'),
+                                    'iconClass' => 'ti-key', 'placeholder' => __('Role Name'),
+                                    'old' => old('name'), 'required' => $required
+                                ])
+                                @include('includes.forms.validation', ['fieldname' => 'name'])
+                            </div>
+                            <fieldset class="form-group">
+                                <div class="row">
+                                <legend class="col-form-legend col-sm-2">Assign Permissions</legend>
+                                    <div class="col-sm-10">
+                                        @foreach ($permissions as $permission)
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                            {{ Form::checkbox('permissions[]', $permission->id, false, ['class' => 'form-check-input'] ) }}
+                                            {{ ucfirst($permission->name) }}
+                                            </label>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </fieldset>
 
-    <div class="form-group">
-        {{ Form::label('name', 'Name') }}
-        {{ Form::text('name', null, array('class' => 'form-control')) }}
-    </div>
 
-    <h5><b>Assign Permissions</b></h5>
+                            <button type="submit" class="btn btn-primary">{{ __('Add Role') }}</button>
+                        </form>
 
-    <div class='form-group'>
-        @foreach ($permissions as $permission)
-            {{ Form::checkbox('permissions[]',  $permission->id ) }}
-            {{ Form::label($permission->name, ucfirst($permission->name)) }}<br>
-
-        @endforeach
-    </div>
-
-    {{ Form::submit('Add', array('class' => 'btn btn-primary')) }}
-
-    {{ Form::close() }}
-
-</div>
-
+                    </div>
+                </div>
+            </div>
+            
 @endsection

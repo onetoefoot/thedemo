@@ -7,6 +7,8 @@
                     <form method="POST" action="{{ route('password.request') }}" aria-label="{{ __('Reset Password') }}">
                         @csrf
 
+                        <input type="hidden" name="token" value="{{ $token }}">
+
                         <div class="form-group">
                             <label class="text-normal text-dark">{{ __('E-Mail Address') }}</label>
                             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" 

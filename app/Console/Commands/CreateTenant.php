@@ -9,7 +9,7 @@ use Illuminate\Console\Command;
 
 class CreateTenant extends Command
 {
-    protected $signature = 'tenant:create {name} {email}';
+    protected $signature = 'tenant:create {name} {email} {password}';
 
     protected $description = 'Creates a tenant with the provided name and email address e.g. php artisan tenant:create boise boise@example.com';
 
@@ -17,6 +17,7 @@ class CreateTenant extends Command
     {
         $name = $this->argument('name');
         $email = $this->argument('email');
+        $password = $this->argument('password');
 
         $baseUrl = config('app.url_base');
         $fqdn = "{$name}.{$baseUrl}";
@@ -27,7 +28,7 @@ class CreateTenant extends Command
             return;
         }
 
-        $tenant = Tenant::createFrom($name, $email);
+        $tenant = Tenant::createFrom($name, $email, $password);
         $this->info("Tenant '{$name}' is created and is now accessible at {$tenant->hostname->fqdn}");
 
         // invite admin

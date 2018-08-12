@@ -23,7 +23,7 @@
                                     <input type="text" class="form-control" id="inputName" placeholder="John Doe"
                                         name="name" value="{{ old('name', $user->name) }}" required>
                                 </div>
-                                    @include('includes.validation', ['fieldname' => 'name'])
+                                    @include('includes.forms.validation', ['fieldname' => 'name'])
                             </div>
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label for="inputEmail">{{ __('E-Mail Address') }}</label>
@@ -34,7 +34,7 @@
                                     <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email"
                                         name="email" value="{{ old('email', $user->email) }}" required>
                                 </div>
-                                    @include('includes.validation', ['fieldname' => 'email'])
+                                    @include('includes.forms.validation', ['fieldname' => 'email'])
                             </div>
 
                             <fieldset class="form-group">
@@ -45,7 +45,7 @@
                                         <div class="form-check">
                                             <label class="form-check-label">
                                                 <input class="form-check-input" 
-                                                        @if(in_array($role->id, $user_roles))
+                                                        @if(is_array($user_roles) && in_array($role->id, $user_roles))
                                                             checked="checked"
                                                         @endif
                                                     name="roles[]" type="checkbox" value="{{$role->id}}"> {{ ucfirst($role->name) }}
@@ -66,7 +66,7 @@
                                     <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
                                         name="password">
                                 </div>
-                                    @include('includes.validation', ['fieldname' => 'password'])
+                                    @include('includes.forms.validation', ['fieldname' => 'password'])
                             </div>
                             <div class="form-group">
                                 <label for="inputPasswordConfirm">{{ __('Confirm Password') }}</label>
@@ -77,7 +77,7 @@
                                     <input id="password-confirm" type="password" class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}"
                                         name="password_confirmation">
                                 </div>
-                                    @include('includes.validation', ['fieldname' => 'password_confirmation'])
+                                    @include('includes.forms.validation', ['fieldname' => 'password_confirmation'])
                             </div>
 
                             <button type="submit" class="btn btn-primary">{{ __('Save Changes') }}</button>
