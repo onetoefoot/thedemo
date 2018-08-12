@@ -7,10 +7,15 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\Permission\Traits\HasRoles;
 // use Spatie\BinaryUuid\HasBinaryUuid;
 use Hyn\Tenancy\Traits\UsesTenantConnection;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
+use Spatie\Image\Manipulations;
 
-class User extends Authenticatable
+
+class User extends Authenticatable implements HasMedia
 {
-    use Notifiable, UsesTenantConnection, HasRoles;
+    use Notifiable, UsesTenantConnection, 
+        HasRoles, HasMediaTrait;
     
     // use HasBinaryUuid;
 
@@ -60,5 +65,19 @@ class User extends Authenticatable
     public function setPasswordAttribute($password)
     {   
         $this->attributes['password'] = bcrypt($password);
+    }
+
+    public function registerMediaCollections()
+    {
+        $this
+            ->addMediaCollection('avatar')
+            ->singleFile();
+    }
+    public function registerMediaConversions($media = null)
+    {
+        $this->addMediaConversion('thumb')
+            ->width(50)
+            ->height(50)
+            ->sharpen(10);
     }
 }

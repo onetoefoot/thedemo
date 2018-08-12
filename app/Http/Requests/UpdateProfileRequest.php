@@ -24,5 +24,9 @@ class UpdateProfileRequest extends FormRequest
     public function commit()
     {
         $this->user()->update(['name' => $this->name, 'email' => $this->email]);
+
+        if (isset($data['avatar'])) {
+            $user->addMediaFromRequest('avatar')->toMediaCollection('avatars');
+        }
     }
 }
