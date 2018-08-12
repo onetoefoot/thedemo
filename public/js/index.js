@@ -89988,14 +89988,8 @@ var GREYS = {
         e.preventDefault();
         var $form = $(this);
         $('#confirm').modal({ backdrop: 'static', keyboard: false }).on('click', '#delete-btn', function () {
-            if (typeof $form.submit === "function") {
-                console.log('function yeah');
-                $form.submit();
-                console.log($form);
-            }
-            console.log('begin submit');
             $form.submit();
-            console.log('end submit');
+            console.log($form.submit());
         });
     });
 });
