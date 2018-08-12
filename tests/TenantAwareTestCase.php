@@ -24,7 +24,7 @@ abstract class TenantAwareTestCase extends TestCase
     protected function refreshApplication()
     {
         parent::refreshApplication();
-        $this->artisan('tenancy:install');
+        $this->artisan('migrate');
     }
 
     protected function assertSystemDatabaseHas($table, array $data)

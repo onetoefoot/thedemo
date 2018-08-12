@@ -57,4 +57,8 @@ class User extends Authenticatable
         'created_at', 'updated_at', 'password_hash'
     ];
 
+    public function setPasswordAttribute($password)
+    {   
+        $this->attributes['password'] = bcrypt($password);
+    }
 }

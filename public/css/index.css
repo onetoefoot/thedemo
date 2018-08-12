@@ -82509,8 +82509,41 @@ table.dataTable.no-footer {
   text-decoration: none;
 }
 
+.form-a-link {
+  font-size: .7em;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+textarea {
+  outline: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: 1px solid #ccc !important;
+}
+
+.btn,
+.btn:hover,
+.btn:active,
+.btn:active:focus,
+.btn:visited,
 .btn:focus,
-.btn:active {
-  text-decoration: none;
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:active:focus,
+.btn-primary:visited,
+.btn-primary:focus,
+button,
+button:hover,
+button:active,
+button:active:focus,
+button:visited,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
 }
 

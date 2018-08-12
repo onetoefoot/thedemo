@@ -11,8 +11,8 @@
                 <p>Are you sure you, want to delete that record?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-sm btn-primary" id="delete-btn">Yes, delete that record</button>
-                <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="delete-btn">Yes, delete that record</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
