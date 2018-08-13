@@ -3138,16 +3138,16 @@
         },
         {
             "name": "spatie/laravel-medialibrary",
-            "version": "7.3.12",
+            "version": "7.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-medialibrary.git",
-                "reference": "cb382e42cf40d43de44e03eb12d42e1ded1f6f48"
+                "reference": "a44312f797198f09ccbe77d57dac0d9e10d1f095"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/cb382e42cf40d43de44e03eb12d42e1ded1f6f48",
-                "reference": "cb382e42cf40d43de44e03eb12d42e1ded1f6f48",
+                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/a44312f797198f09ccbe77d57dac0d9e10d1f095",
+                "reference": "a44312f797198f09ccbe77d57dac0d9e10d1f095",
                 "shasum": ""
             },
             "require": {
@@ -3217,20 +3217,20 @@
                 "media",
                 "spatie"
             ],
-            "time": "2018-07-30T07:00:10+00:00"
+            "time": "2018-08-13T11:39:15+00:00"
         },
         {
             "name": "spatie/laravel-permission",
-            "version": "2.13.0",
+            "version": "2.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-permission.git",
-                "reference": "cbc7529dabdb7b6543e0d2b3f55b81f44bed9fa5"
+                "reference": "5a40d8ba8b7af83ff149d075351616027a0b771f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/cbc7529dabdb7b6543e0d2b3f55b81f44bed9fa5",
-                "reference": "cbc7529dabdb7b6543e0d2b3f55b81f44bed9fa5",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/5a40d8ba8b7af83ff149d075351616027a0b771f",
+                "reference": "5a40d8ba8b7af83ff149d075351616027a0b771f",
                 "shasum": ""
             },
             "require": {
@@ -3281,7 +3281,7 @@
                 "security",
                 "spatie"
             ],
-            "time": "2018-08-02T20:20:03+00:00"
+            "time": "2018-08-13T15:28:03+00:00"
         },
         {
             "name": "spatie/pdf-to-image",

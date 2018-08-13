@@ -105,12 +105,12 @@ return [
         /**
          * Whether the integration with nginx is currently active.
          */
-        'enabled' => false,
+        'enabled' => env('WEBSERVER_NGINX_ENABLED', false),
 
         /**
          * The php sock to be used.
          */
-        'php-sock' => 'unix:/var/run/php/php7.1-fpm.sock',
+        'php-sock' => 'fastcgi_pass unix:/Users/jodycastro/.valet/valet.sock',
 
         /**
          * Define the ports of your nginx service.
@@ -154,7 +154,7 @@ return [
              * Location where vhost configuration files can be found.
              */
             'vhost-files' => [
-                '/etc/nginx/sites-enabled/'
+                '/usr/local/etc/nginx/sites-enabled/'
             ],
 
             /**
@@ -165,7 +165,7 @@ return [
                  * Action that asserts nginx is installed.
                  */
                 // 'exists' => '/etc/init.d/nginx',
-                'exists' => '/usr/local/opt/nginx/bin/nginx',
+                'exists' => '/usr/local/bin/nginx',
                 /**
                  * Action to run to test the nginx configuration.
                  *
@@ -173,14 +173,14 @@ return [
                  *  true succeeds, false fails
                  */
                 // 'test-config' => '/etc/init.d/nginx configtest',
-                'test-config' => '/usr/local/opt/nginx/bin/nginx -t',
+                'test-config' => '/usr/local/bin/nginx -t',
                 /**
                  * Action to run to reload the nginx service.
                  *
                  * @info set to null to disable reloading.
                  */
                 // 'reload' => '/etc/init.d/nginx reload'
-                'reload' => '/usr/local/opt/nginx/bin/nginx -s reload'
+                'reload' => '/usr/local/bin/nginx -s reload'
             ]
         ]
     ]
