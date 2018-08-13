@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Hyn\Tenancy\Environment;
 use Hyn\Tenancy\Models\Hostname;

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use Auth;
 use Session;
-use App\User;
+use App\Models\User;
 use Hyn\Tenancy\Environment;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;

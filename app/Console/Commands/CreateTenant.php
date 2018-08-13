@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Tenant;
 use App\Notifications\TenantCreated;
-use App\Tenant;
 use Hyn\Tenancy\Models\Hostname;
 use Illuminate\Console\Command;
 
