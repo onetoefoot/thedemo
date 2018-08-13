@@ -25,8 +25,9 @@ class UpdateProfileRequest extends FormRequest
     {
         $this->user()->update(['name' => $this->name, 'email' => $this->email]);
 
+        // add avatar image
         if (isset($data['avatar'])) {
-            $user->addMediaFromRequest('avatar')->toMediaCollection('avatars');
+            $this->user()->addMediaFromRequest('avatar')->toMediaCollection('avatar');
         }
     }
 }

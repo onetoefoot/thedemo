@@ -1,4 +1,4 @@
-@extends('backend.layouts.app')
+@extends('layouts.app')
 
 @section('title', '| ' . __('Add User') )
 
@@ -50,7 +50,7 @@
 
                             <div class="form-group">
                                 @include('includes.forms.field-text', [
-                                    'fieldName' => 'password', 'displayName' => __('Password'),
+                                    'fieldName' => 'password', 'displayName' => __('Password'), 'type' => 'password',
                                     'iconClass' => 'ti-key', 'placeholder' => '',
                                     'old' => '', 'required' => 'required'
                                 ])
@@ -58,7 +58,7 @@
                             </div>
                             <div class="form-group">
                                 @include('includes.forms.field-text', [
-                                    'fieldName' => 'password_confirmation', 'displayName' => __('Confirm Password'),
+                                    'fieldName' => 'password_confirmation', 'displayName' => __('Confirm Password'), 'type' => 'password',
                                     'iconClass' => 'ti-key', 'placeholder' => '',
                                     'old' => '', 'required' => 'required'
                                 ])

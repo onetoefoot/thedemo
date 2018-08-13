@@ -1,4 +1,4 @@
-@extends('frontend.layouts.app')
+@extends('layouts.app')
 
 @section('content')
             <div class="row gap-20 masonry pos-r">

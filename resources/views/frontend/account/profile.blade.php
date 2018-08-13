@@ -1,4 +1,4 @@
-@extends('frontend.layouts.app')
+@extends('layouts.app')
 
 @section('content')
 
@@ -17,6 +17,7 @@
                                     <a class="nav-item nav-link" id="nav-changepassword-tab" data-toggle="tab" href="#nav-changepassword" role="tab" aria-controls="nav-changepassword" aria-selected="false">Change Password</a>
                                 </div>
                             </nav>
+                            
                             <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 
@@ -54,7 +55,7 @@
                                         @include('includes.forms.field-text', [
                                             'fieldName' => 'timezone', 'displayName' => __('Timezone'),
                                             'iconClass' => 'ti-time', 'placeholder' => __('Timezone'),
-                                            'old' => old('timezone', Auth::user()->timezone), 'required' => 'required'
+                                            'old' => old('timezone', Auth::user()->timezone), 'required' => ''
                                         ])
                                         @include('includes.forms.validation', ['fieldname' => 'name'])
                                     </div>
@@ -64,25 +65,22 @@
                                 <div class="tab-pane fade" id="nav-changepassword" role="tabpanel" aria-labelledby="nav-changepassword-tab">
                                     <div class="form-group{{ $errors->has('password-current') ? ' is-invalid' : '' }}">
                                         @include('includes.forms.field-text', [
-                                            'fieldName' => 'password-current', 'displayName' => __('Current Password'),
-                                            'iconClass' => 'ti-key', 'placeholder' => 'Current Password',
-                                            'old' => '', 'required' => ''
+                                            'fieldName' => 'password-current', 'displayName' => __('Current Password'), 'type' => 'password',
+                                            'iconClass' => 'ti-key', 'placeholder' => 'Current Password'
                                         ])
                                         @include('includes.forms.validation', ['fieldname' => 'password-current'])
                                     </div>
                                     <div class="form-group{{ $errors->has('password') ? ' is-invalid' : '' }}">
                                         @include('includes.forms.field-text', [
-                                            'fieldName' => 'password', 'displayName' => __('Password'),
-                                            'iconClass' => 'ti-key', 'placeholder' => '',
-                                            'old' => '', 'required' => 'required'
+                                            'fieldName' => 'password', 'displayName' => __('Password'), 'type' => 'password',
+                                            'iconClass' => 'ti-key'
                                         ])
                                         @include('includes.forms.validation', ['fieldname' => 'password'])
                                     </div>
                                     <div class="form-group{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}">
                                         @include('includes.forms.field-text', [
-                                            'fieldName' => 'password_confirmation', 'displayName' => __('Confirm Password'),
-                                            'iconClass' => 'ti-key', 'placeholder' => '',
-                                            'old' => '', 'required' => 'required'
+                                            'fieldName' => 'password_confirmation', 'displayName' => __('Confirm Password'), 'type' => 'password',
+                                            'iconClass' => 'ti-key'
                                         ])
                                         @include('includes.forms.validation', ['fieldname' => 'password_confirmation'])
                                     </div>

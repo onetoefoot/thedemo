@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\User;
 use Auth;
+use Session;
+use App\User;
+use Hyn\Tenancy\Environment;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
-use Session;
+use App\Notifications\UserCreated;
 
 class UserController extends Controller
 {
@@ -64,8 +66,11 @@ class UserController extends Controller
             $role_r = Role::where('id', '=', $role)->firstOrFail();            
             $user->assignRole($role_r);
             }
-        }        
+        }
 
+        $tenancy = app(Environment::class);
+        $user->notify($tenancy->hostname()->fqdn);
+            
         return redirect()->route('users.index')
             ->with('flash_message',
              'User successfully added.');

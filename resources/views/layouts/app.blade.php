@@ -87,12 +87,12 @@
     <!-- @App Content -->
     <!-- =================================================== -->
     <div>
-    @include('frontend.includes.sidebar')
+    @include('includes.sidebar')
 
       <!-- #Main ============================ -->
       <div class="page-container">
 
-          @include('frontend.includes.nav')
+          @include('includes.nav')
 
         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
@@ -101,10 +101,11 @@
           </div>
         </main>
 
-        @include('frontend.includes.footer')
+        @include('includes.footer')
 
       </div>
     </div>
-    <script type="text/javascript" src="/js/index.js"></script>
+    <script type="text/javascript" src="{{ mix('js/index.js') }}"></script>
+
   </body>
 </html>

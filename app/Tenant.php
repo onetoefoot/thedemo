@@ -52,7 +52,9 @@ class Tenant
     {
         $tenancy = app(Environment::class);
         $tenancy->tenant($website);
-        $admin = User::create(['name' => $name, 'email' => $email, 
+
+        $user = new User;
+        $admin = $user->create(['name' => $name, 'email' => $email, 
             'password' => Hash::make($password), 'active' => 1, 'confirmed' => 1]);
         $admin->guard_name = 'web';
         $admin->assignRole('admin');

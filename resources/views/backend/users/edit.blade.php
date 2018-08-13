@@ -1,4 +1,4 @@
-@extends('backend.layouts.app')
+@extends('layouts.app')
 
 @section('title', '| ' . __('Edit User') )
 
@@ -53,17 +53,15 @@
 
                             <div class="form-group{{ $errors->has('password') ? ' is-invalid' : '' }}">
                                 @include('includes.forms.field-text', [
-                                    'fieldName' => 'password', 'displayName' => __('Password'),
-                                    'iconClass' => 'ti-key', 'placeholder' => '',
-                                    'old' => '', 'required' => 'required'
+                                    'fieldName' => 'password', 'displayName' => __('Password'), 'type' => 'password',
+                                    'iconClass' => 'ti-key'
                                 ])
                                 @include('includes.forms.validation', ['fieldname' => 'password'])
                             </div>
                             <div class="form-group{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}">
                                 @include('includes.forms.field-text', [
-                                    'fieldName' => 'password_confirmation', 'displayName' => __('Confirm Password'),
-                                    'iconClass' => 'ti-key', 'placeholder' => '',
-                                    'old' => '', 'required' => 'required'
+                                    'fieldName' => 'password_confirmation', 'displayName' => __('Confirm Password'), 'type' => 'password',
+                                    'iconClass' => 'ti-key'
                                 ])
                                 @include('includes.forms.validation', ['fieldname' => 'password_confirmation'])
                             </div>
