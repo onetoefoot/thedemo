@@ -43,4 +43,9 @@ class SpatieUrlGenerator extends BaseUrlGenerator
     {
         return config('app.url').'/'.$this->pathGenerator->getPathForResponsiveImages($this->media);
     }
+
+    public function getPath()
+    {
+        return $this->getPathRelativeToRoot();
+    }
 }
