@@ -65,11 +65,6 @@ class User extends Authenticatable implements HasMedia
      */
     protected $dates = ['last_login_at', 'deleted_at'];
 
-    public function setPasswordAttribute($password)
-    {   
-        $this->attributes['password'] = bcrypt($password);
-    }
-
     public function registerMediaCollections()
     {
         $this->addMediaCollection('avatar')

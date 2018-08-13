@@ -43,6 +43,9 @@
                         @include('includes.forms.edit-record', [
                                 'route' => route('users.edit', $user->id)
                             ])
+                        @include('includes.forms.activity-log', [
+                                'route' => route('activity-log.show' ,$user->id)
+                            ])
                         @include('includes.forms.delete-record', [
                                 'route' => route('users.destroy' ,$user->id)
                             ])
