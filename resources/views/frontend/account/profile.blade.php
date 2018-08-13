@@ -52,10 +52,10 @@
                                     </div>
 
                                     <div class="form-group{{ $errors->has('timezone') ? ' has-error' : '' }}">
-                                        @include('includes.forms.field-text', [
+                                        @include('includes.forms.field-select', [
                                             'fieldName' => 'timezone', 'displayName' => __('Timezone'),
                                             'iconClass' => 'ti-time', 'placeholder' => __('Timezone'),
-                                            'old' => old('timezone', Auth::user()->timezone), 'required' => ''
+                                            'old' => old('timezone', Auth::user()->timezone), 'options' => $timezonelist
                                         ])
                                         @include('includes.forms.validation', ['fieldname' => 'name'])
                                     </div>

@@ -23,7 +23,11 @@ class UpdateProfileRequest extends FormRequest
 
     public function commit()
     {
-        $this->user()->update(['name' => $this->name, 'email' => $this->email]);
+        $this->user()->update([
+            'name' => $this->name,
+            'email' => $this->email,
+            'timezone' => $this->timezone,
+        ]);
 
         // add avatar image
         if (isset($data['avatar'])) {

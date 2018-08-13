@@ -8,7 +8,9 @@ class ProfileController extends Controller
 {
     public function edit()
     {
-        return view('frontend.account.profile');
+        $timezonelist = \DateTimeZone::listIdentifiers(\DateTimeZone::ALL);
+
+        return view('frontend.account.profile', ['timezonelist' => $timezonelist]);
     }
 
     public function update(UpdateProfileRequest $request)

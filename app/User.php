@@ -5,7 +5,6 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\Permission\Traits\HasRoles;
-// use Spatie\BinaryUuid\HasBinaryUuid;
 use Hyn\Tenancy\Traits\UsesTenantConnection;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
@@ -17,8 +16,6 @@ class User extends Authenticatable implements HasMedia
     use Notifiable, UsesTenantConnection, 
         HasRoles, HasMediaTrait;
     
-    // use HasBinaryUuid;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -26,22 +23,18 @@ class User extends Authenticatable implements HasMedia
      */
     
     protected $fillable = [
-        'name', 'email', 'password',
-        // 'uuid',
-        // 'name',
-        // 'first_name',
-        // 'last_name',
-        // 'email',
-        // 'avatar_type',
-        // 'avatar_location',
-        // 'password',
-        // 'password_changed_at',
-        // 'active',
-        // 'confirmation_code',
-        // 'confirmed',
-        // 'timezone',
-        // 'last_login_at',
-        // 'last_login_ip'
+        'name',
+        'first_name',
+        'last_name',
+        'email',
+        'password',
+        'password_changed_at',
+        'active',
+        'confirmation_code',
+        'confirmed',
+        'timezone',
+        'last_login_at',
+        'last_login_ip',
     ];
 
     /**
@@ -61,6 +54,11 @@ class User extends Authenticatable implements HasMedia
     protected $guarded = [
         'created_at', 'updated_at', 'password_hash'
     ];
+
+    /**
+     * @var array
+     */
+    protected $dates = ['last_login_at', 'deleted_at'];
 
     public function setPasswordAttribute($password)
     {   
