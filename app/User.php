@@ -9,13 +9,20 @@ use Hyn\Tenancy\Traits\UsesTenantConnection;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\Image\Manipulations;
-
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class User extends Authenticatable implements HasMedia
 {
     use Notifiable, UsesTenantConnection, 
-        HasRoles, HasMediaTrait;
+        HasRoles, HasMediaTrait, LogsActivity;
     
+    /**
+     * What is going to be logged
+     *
+     * @var boolean
+     */
+    protected static $logFillable = true;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -24,8 +31,6 @@ class User extends Authenticatable implements HasMedia
     
     protected $fillable = [
         'name',
-        'first_name',
-        'last_name',
         'email',
         'password',
         'password_changed_at',
