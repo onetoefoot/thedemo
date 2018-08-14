@@ -1,7 +1,10 @@
 
-<div class="guest-header">
+            <div class="guest-header">
                 <div class="top-left links">
                     <div class="btn-group">
+                        <div class="brand links">
+                            <a href="/">{{ config('app.name', '') }}</a>
+                        </div>
                         <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             {{__('Help')}}
                         </button>
@@ -22,4 +25,4 @@
                     @endauth
                 </div>
                 @endif
-</div>
+            </div>

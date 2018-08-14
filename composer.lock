@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "24e5554f5804a38adccddb474d04be00",
+    "content-hash": "8dd31ccb3854c7e1c0192e09237372f5",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -2296,6 +2296,94 @@
             "time": "2018-07-15T17:25:16+00:00"
         },
         {
+            "name": "onetoefoot/docs",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../packages/onetoefoot/docs",
+                "reference": "309fbf0ffa050926279812119987ffb87761c4ed",
+                "shasum": null
+            },
+            "require": {
+                "illuminate/support": "~5.5.0|~5.6.0",
+                "php": "^7.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Onetoefoot\\Docs\\DocsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Onetoefoot\\Docs\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Onetoefoot\\Docs\\Test\\": "tests"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                "Jody Castro",
+                "jcandothers@gmail.com"
+            ],
+            "description": "Documentation "
+        },
+        {
+            "name": "onetoefoot/tasks",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../packages/onetoefoot/tasks",
+                "reference": "21ed0bcfd382ce6231ecb62ae36b6442f7ed50a8",
+                "shasum": null
+            },
+            "require": {
+                "illuminate/support": "~5.5.0|~5.6.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.5.0|~3.6.0",
+                "phpunit/phpunit": "^6.3|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Onetoefoot\\Tasks\\TasksServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Onetoefoot\\Tasks\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Onetoefoot\\Tasks\\Test\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "test:windows": [
+                    "vendor\\bin\\phpunit"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Tasks"
+        },
+        {
             "name": "paragonie/random_compat",
             "version": "v9.99.99",
             "source": {
@@ -4430,54 +4518,6 @@
                 "dump"
             ],
             "time": "2018-07-26T11:24:31+00:00"
-        },
-        {
-            "name": "the-demo/tasks",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../packages/onetoefoot/tasks",
-                "reference": "21ed0bcfd382ce6231ecb62ae36b6442f7ed50a8",
-                "shasum": null
-            },
-            "require": {
-                "illuminate/support": "~5.5.0|~5.6.0",
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~3.5.0|~3.6.0",
-                "phpunit/phpunit": "^6.3|^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "TheDemo\\Tasks\\TasksServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TheDemo\\Tasks\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "TheDemo\\Tasks\\Test\\": "tests"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpunit"
-                ],
-                "test:windows": [
-                    "vendor\\bin\\phpunit"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "description": "Tasks"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -7377,7 +7417,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "the-demo/tasks": 20
+        "onetoefoot/docs": 20,
+        "onetoefoot/tasks": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
