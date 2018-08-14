@@ -2301,7 +2301,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../packages/onetoefoot/docs",
-                "reference": "309fbf0ffa050926279812119987ffb87761c4ed",
+                "reference": "39f652ee4ef19254a1ff42015e5c58d2b2ae19c8",
                 "shasum": null
             },
             "require": {
@@ -2341,7 +2341,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../packages/onetoefoot/tasks",
-                "reference": "21ed0bcfd382ce6231ecb62ae36b6442f7ed50a8",
+                "reference": "81dc5a2411a087ed4d7295933b0384c14268b242",
                 "shasum": null
             },
             "require": {

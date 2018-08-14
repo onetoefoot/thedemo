@@ -9,9 +9,9 @@
                             {{__('Help')}}
                         </button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class='dropdown-item' href="#">{{__('Documentation')}}</a>
-                            <a class='dropdown-item' href="#">{{__('Terms of service')}}</a>
-                            <a class='dropdown-item' href="#">{{__('Privacy policy')}}</a>
+                            <a class='dropdown-item' href="/docs">{{__('Documentation')}}</a>
+                            <a class='dropdown-item' href="/docs/terms_of_service">{{__('Terms of service')}}</a>
+                            <a class='dropdown-item' href="/docs/privacy_policy">{{__('Privacy policy')}}</a>
                         </div>
                     </div>
                 </div>
