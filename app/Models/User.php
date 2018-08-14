@@ -10,11 +10,13 @@ use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\Image\Manipulations;
 use Spatie\Activitylog\Traits\LogsActivity;
+use TheDemo\Tasks\Traits\HasTasks;
 
 class User extends Authenticatable implements HasMedia
 {
     use Notifiable, UsesTenantConnection, 
-        HasRoles, HasMediaTrait, LogsActivity;
+        HasRoles, HasMediaTrait, LogsActivity,
+        HasTasks;
     
     /**
      * What is going to be logged

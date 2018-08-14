@@ -40,7 +40,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class='sidebar-link' href="">
+              <a class='sidebar-link' href="{{ url('/tasks') }} ">
                 <span class="icon-holder">
                   <i class="c-grey-500 ti-view-list-alt"></i>
                 </span>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b5a6ef183d0c060c0b8bcbae4c434c2",
+    "content-hash": "b3a1630f1c3ba69d115bbb8dc4ff71b4",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -4364,6 +4364,54 @@
             "time": "2018-07-26T11:24:31+00:00"
         },
         {
+            "name": "the-demo/tasks",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../../packages/the-demo/tasks",
+                "reference": "c283f4e7f3d4c996cf6d210d478b580e3c3e47dc",
+                "shasum": null
+            },
+            "require": {
+                "illuminate/support": "~5.5.0|~5.6.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.5.0|~3.6.0",
+                "phpunit/phpunit": "^6.3|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TheDemo\\Tasks\\TasksServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TheDemo\\Tasks\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "TheDemo\\Tasks\\Test\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "test:windows": [
+                    "vendor\\bin\\phpunit"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Tasks"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.1",
             "source": {
@@ -7260,7 +7308,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "the-demo/tasks": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
