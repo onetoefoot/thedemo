@@ -2,7 +2,7 @@
 
 namespace App\Observers;
 
-use App\User;
+use App\Models\User;
 use Illuminate\Support\Facades\Log;
 
 class UserObserver
@@ -10,7 +10,7 @@ class UserObserver
     /**
      * Handle the user "created" event.
      *
-     * @param  \App\User  $user
+     * @param  \App\Models\User  $user
      * @return void
      */
     public function created(User $user)
