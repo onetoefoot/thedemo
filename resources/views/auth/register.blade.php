@@ -1,4 +1,4 @@
-@extends('auth.app')
+@extends('layouts.guest')
 
 @section('content')
             <div class="peers ai-s fxw-nw">
