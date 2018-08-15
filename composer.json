@@ -22,7 +22,7 @@
         "spatie/laravel-activitylog": "^2.8",
         "spatie/laravel-cookie-consent": "^2.4",
         "spatie/laravel-html": "^2.4",
-        "spatie/laravel-medialibrary": "^7.0.0",
+        "spatie/laravel-medialibrary": "^7.4",
         "spatie/laravel-permission": "^2.13",
         "webpatser/laravel-uuid": "^3.0"
     },
