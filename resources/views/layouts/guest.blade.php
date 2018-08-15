@@ -26,7 +26,7 @@
         <div class="flex-center position-ref full-height">
             @include('includes.guest-header')
 
-            <div class="mainContent">
+            <div class="container-fluid">
                 @yield('content')
             </div>
         </div>

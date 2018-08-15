@@ -2,7 +2,7 @@
 
 @section('content')
             <div class="peers ai-s fxw-nw">
-                <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r" style='min-width: 320px;'>
+                <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r m-auto" style='min-width: 320px;'>
                     <h4 class="fw-300 c-grey-900 mB-40">{{ __('Reset Password') }}</h4>
                     <form method="POST" action="{{ route('password.request') }}" aria-label="{{ __('Reset Password') }}">
                         @csrf
