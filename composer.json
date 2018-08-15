@@ -7,9 +7,7 @@
     "require": {
         "php": "^7.1.3",
         "appstract/laravel-blade-directives": "^0.4.4",
-        "arcanedev/log-viewer": "^4.5",
         "arcanedev/no-captcha": "^5.0",
-        "beyondcode/laravel-self-diagnosis": "^0.4.1",
         "creativeorange/gravatar": "~1.0",
         "davejamesmiller/laravel-breadcrumbs": "^5.0",
         "fideloper/proxy": "^4.0",
@@ -22,7 +20,6 @@
         "onetoefoot/docs": "dev-master",
         "onetoefoot/tasks": "dev-master",
         "spatie/laravel-activitylog": "^2.8",
-        "spatie/laravel-binary-uuid": "^1.2",
         "spatie/laravel-cookie-consent": "^2.4",
         "spatie/laravel-html": "^2.4",
         "spatie/laravel-medialibrary": "^7.0.0",

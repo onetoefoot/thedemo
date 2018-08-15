@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8dd31ccb3854c7e1c0192e09237372f5",
+    "content-hash": "b120ea7b8305e2d04d206f97ec1b22ee",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -108,72 +108,6 @@
                 "laravel-blade-directives"
             ],
             "time": "2017-10-09T09:22:20+00:00"
-        },
-        {
-            "name": "arcanedev/log-viewer",
-            "version": "4.5.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ARCANEDEV/LogViewer.git",
-                "reference": "fd12673d8e9439f8ba3dbf000ba0b338ae4c583a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ARCANEDEV/LogViewer/zipball/fd12673d8e9439f8ba3dbf000ba0b338ae4c583a",
-                "reference": "fd12673d8e9439f8ba3dbf000ba0b338ae4c583a",
-                "shasum": ""
-            },
-            "require": {
-                "arcanedev/support": "~4.3.0",
-                "php": ">=7.1.3",
-                "psr/log": "~1.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~3.6.0",
-                "phpunit/phpcov": "~5.0",
-                "phpunit/phpunit": "~7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Arcanedev\\LogViewer\\LogViewerServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Arcanedev\\LogViewer\\": "src/"
-                },
-                "files": [
-                    "constants.php",
-                    "helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "ARCANEDEV",
-                    "email": "arcanedev.maroc@gmail.com",
-                    "homepage": "https://github.com/arcanedev-maroc",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Provides a Log Viewer for Laravel 5",
-            "homepage": "https://github.com/ARCANEDEV/LogViewer",
-            "keywords": [
-                "arcanedev",
-                "arcanesoft",
-                "laravel",
-                "log",
-                "log viewer",
-                "log-viewer",
-                "logviewer"
-            ],
-            "time": "2018-07-19T16:42:23+00:00"
         },
         {
             "name": "arcanedev/no-captcha",
@@ -295,64 +229,6 @@
                 "support"
             ],
             "time": "2018-02-08T00:42:15+00:00"
-        },
-        {
-            "name": "beyondcode/laravel-self-diagnosis",
-            "version": "0.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/beyondcode/laravel-self-diagnosis.git",
-                "reference": "b330a934bf2fe65b92d9adadc6e7d46313322ec0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/beyondcode/laravel-self-diagnosis/zipball/b330a934bf2fe65b92d9adadc6e7d46313322ec0",
-                "reference": "b330a934bf2fe65b92d9adadc6e7d46313322ec0",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "5.2.*|5.3.*|5.4.*|5.5.*|5.6.*",
-                "php": "^7.1",
-                "vlucas/phpdotenv": "~2.5"
-            },
-            "require-dev": {
-                "larapack/dd": "^1.0",
-                "mockery/mockery": "^1.0",
-                "orchestra/testbench": "~3.5",
-                "phpunit/phpunit": "^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "BeyondCode\\SelfDiagnosis\\SelfDiagnosisServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "BeyondCode\\SelfDiagnosis\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marcel Pociot",
-                    "email": "marcel@beyondco.de",
-                    "homepage": "https://beyondcode.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Perform various self diagnosis tests on your Laravel application.",
-            "homepage": "https://github.com/beyondcode/laravel-self-diagnosis",
-            "keywords": [
-                "beyondcode",
-                "laravel-self-diagnosis"
-            ],
-            "time": "2018-07-09T12:33:27+00:00"
         },
         {
             "name": "creativeorange/gravatar",
@@ -3240,62 +3116,6 @@
                 "user"
             ],
             "time": "2018-07-28T21:36:47+00:00"
-        },
-        {
-            "name": "spatie/laravel-binary-uuid",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-binary-uuid.git",
-                "reference": "0396908a0207225eeea0d792fa8d2f3658ff0f19"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-binary-uuid/zipball/0396908a0207225eeea0d792fa8d2f3658ff0f19",
-                "reference": "0396908a0207225eeea0d792fa8d2f3658ff0f19",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/queue": "~5.5.28|~5.6.0",
-                "php": "^7.1",
-                "ramsey/uuid": "^3.7"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^3.5|~3.6.0",
-                "phpunit/phpunit": "^6.5|^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Spatie\\BinaryUuid\\UuidServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\BinaryUuid\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Brent Roose",
-                    "email": "brent@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Binary support for UUIDs in Laravel",
-            "homepage": "https://github.com/spatie/laravel-binary-uuid",
-            "keywords": [
-                "laravel-binary-uuid",
-                "spatie"
-            ],
-            "time": "2018-08-08T13:43:10+00:00"
         },
         {
             "name": "spatie/laravel-cookie-consent",
