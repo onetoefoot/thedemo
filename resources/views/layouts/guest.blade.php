@@ -23,9 +23,10 @@
             });
         </script>
 
-        <div class="flex-center position-ref full-height">
-            @include('includes.guest-header')
+        @include('includes.guest-header')
 
+        <!-- <div class="flex-center position-ref full-height"> -->
+        <main role="main" class="container">
             <div class="container-fluid">
                 @yield('content')
             </div>
