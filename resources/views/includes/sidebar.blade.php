@@ -31,7 +31,7 @@
           <!-- ### $Sidebar Menu ### -->
           <ul class="sidebar-menu scrollable pos-r">
 
-            <li class="nav-item mT-30 active">
+            <li class="nav-item mT-30">
               <a class="sidebar-link" href="{{ url('/dashboard') }}">
                 <span class="icon-holder">
                   <i class="c-grey-500 ti-home"></i>

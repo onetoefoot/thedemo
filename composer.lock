@@ -2438,7 +2438,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../packages/onetoefoot/docs",
-                "reference": "b7779ccd463a2bcc69f76290d6ed9b95d25c26f5",
+                "reference": "7de5bfc06ca93682e08a9f8175cec2630ffaf6b4",
                 "shasum": null
             },
             "require": {
