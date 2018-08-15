@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -90152,7 +90152,7 @@ var GREYS = {
 
 /***/ }),
 
-/***/ "./resources/assets/scripts/index.js":
+/***/ "./resources/assets/scripts/index_guest.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90543,19 +90543,10 @@ var Skycons = __WEBPACK_IMPORTED_MODULE_0_skycons___default()(window);
 
 /***/ }),
 
-/***/ "./resources/assets/styles/index_guest.scss":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 0:
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__("./resources/assets/scripts/index.js");
-__webpack_require__("./resources/assets/styles/index.scss");
-module.exports = __webpack_require__("./resources/assets/styles/index_guest.scss");
+module.exports = __webpack_require__("./resources/assets/scripts/index_guest.js");
 
 
 /***/ })
