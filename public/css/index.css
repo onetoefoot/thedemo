@@ -82553,12 +82553,22 @@ legend {
 
 html,
 body {
+  font-family: "Whitney SSm A","Whitney SSm B",sans-serif;
   background: #fafafa;
-  color: #636b6f;
-  font-family: 'Raleway', sans-serif;
+  color: #525252;
   font-weight: 100;
   height: 100vh;
   margin: 0;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1b3747;
 }
 
 .full-height {
