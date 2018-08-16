@@ -1,0 +1,113 @@
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+$hl: (
+    text: #333b46,
+    back: #f2f2fa,
+    number: #007698,
+    string: #e77636,
+    title: #e14a0c,
+    type: #007698,
+    tag: #22a4c9,
+    link: #aaad00,
+    symbol: #e83134,
+    builtin: #22a4c9,
+    deletion: #fcebec,
+    addition: #e5e4d1,
+    comment: #9797a7
+);
+.hljs {
+    background: color($hl, back);
+    color: color($hl, text);
+    display: block;
+    overflow-x: auto;
+    padding: .5em;
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: color($hl, comment);
+    font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+    color: color($hl, text);
+    font-weight: bold;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+    color: color($hl, number);
+}
+
+.hljs-string,
+.hljs-doctag {
+    color: color($hl, string);
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+    color: color($hl, title);
+    font-weight: bold;
+}
+
+.hljs-subst {
+    font-weight: normal;
+}
+
+.hljs-type,
+.hljs-class .hljs-title {
+    color: color($hl, type);
+    font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+    color: color($hl, tag);
+    font-weight: normal;
+}
+
+.hljs-regexp,
+.hljs-link {
+    color: color($hl, link);
+}
+
+.hljs-symbol,
+.hljs-bullet {
+    color: color($hl, symbol);
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+    color: color($hl, builtin);
+}
+
+.hljs-meta {
+    color: color($hl, comment);
+    font-weight: bold;
+}
+
+.hljs-deletion {
+    background: color($hl, deletion);
+}
+
+.hljs-addition {
+    background: color($hl, addition);
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-strong {
+    font-weight: bold;
+}
