@@ -18,7 +18,6 @@ Route::get('/', function () {
 Route::group(['middleware' => 'tenancy.enforce'], function () {
     Auth::routes();
     Route::get('/dashboard', 'DashboardController@index');
-    Route::resource('tasks', 'TaskController');
     Route::prefix('backend')->group(function () {
         Route::group(['middleware' => 'backend'], function () {
             Route::resource('users', 'UserController');
