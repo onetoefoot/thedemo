@@ -10,11 +10,13 @@ use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\Image\Manipulations;
 use Spatie\Activitylog\Traits\LogsActivity;
+use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable implements HasMedia
 {
     use Notifiable, UsesTenantConnection, 
-        HasRoles, HasMediaTrait, LogsActivity;
+        HasRoles, HasMediaTrait, LogsActivity,
+        HasApiTokens;
     
     /**
      * What is going to be logged

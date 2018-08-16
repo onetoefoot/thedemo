@@ -90449,6 +90449,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__base__ = __webpack_require__("./resources/assets/scripts/_base.js");
 
 
+// Vue.component(
+//     'passport-clients',
+//     require('./vue/components/passport/Clients.vue')
+// );
+
+// Vue.component(
+//     'passport-authorized-clients',
+//     require('./vue/components/passport/AuthorizedClients.vue')
+// );
+
+// Vue.component(
+//     'passport-personal-access-tokens',
+//     require('./vue/components/passport/PersonalAccessTokens.vue')
+// );
+
 /***/ }),
 
 /***/ "./resources/assets/scripts/masonry/index.js":
