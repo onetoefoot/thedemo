@@ -2407,7 +2407,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../packages/onetoefoot/sampleidentifier",
-                "reference": "14889684359552be222faca66a144ed0648b455e",
+                "reference": "2578a33eb397462e8bc8bb5efe7db5f4fdbc2657",
                 "shasum": null
             },
             "require": {
@@ -2415,13 +2415,31 @@
                 "nesbot/carbon": "^1.25"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Onetoefoot\\Sampleidentifier\\SampleidentifierServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Onetoefoot\\Sampleidentifier\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Onetoefoot\\Sampleidentifier\\Test\\": "tests"
+                }
+            },
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
                     "name": "Jody Castro",
-                    "email": "jcandothers@gmail.com"
+                    "email": "jcandothers@gmail.com",
+                    "homepage": "https://www.jodycastro.com"
                 }
             ],
             "description": "Sample Identifier"

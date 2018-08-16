@@ -15,7 +15,6 @@
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label for="inputName">{{ __('Name') }}</label>
                                 @include('includes.forms.field-text', [
                                     'fieldName' => 'name', 'displayName' => __('Name'),
                                     'iconClass' => 'ti-key', 'placeholder' => __('John Doe'),

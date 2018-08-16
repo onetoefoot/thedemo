@@ -41,11 +41,11 @@
             </li>
 
             <li class="nav-item">
-              <a class='sidebar-link' href="{{ url('/tasks') }} ">
+              <a class='sidebar-link' href="{{ url('/sampleidentifier') }} ">
                 <span class="icon-holder">
                   <i class="c-grey-500 ti-view-list-alt"></i>
                 </span>
-                <span class="title">{{__('Tasks')}}</span>
+                <span class="title">{{__('Sample Identifier')}}</span>
               </a>
             </li>
             
