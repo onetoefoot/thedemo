@@ -61,13 +61,13 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class='sidebar-link' href="#">{{__('Documentation')}}</a>
+                  <a class='sidebar-link' href="/docs">{{__('Documentation')}}</a>
                 </li>
                 <li>
-                  <a class='sidebar-link' href="#">{{__('Terms of service')}}</a>
+                  <a class='sidebar-link' href="/terms">{{__('Terms of service')}}</a>
                 </li>
                 <li>
-                  <a class='sidebar-link' href="#">{{__('Privacy policy')}}</a>
+                  <a class='sidebar-link' href="/privacy">{{__('Privacy policy')}}</a>
                 </li>
               </ul>
             </li>

@@ -23,7 +23,7 @@
             });
         </script>
 
-        @include('includes.guest-header')
+        @include('includes.nav-guest')
 
         <!-- <div class="flex-center position-ref full-height"> -->
         <main role="main" class="container">
