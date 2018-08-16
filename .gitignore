@@ -13,3 +13,7 @@ npm-debug.log
 yarn-error.log
 .env
 
+# no files for testing
+/config/docs.php
+/resources/views/docs
+
