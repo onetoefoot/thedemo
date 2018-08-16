@@ -5720,54 +5720,6 @@
             "time": "2018-06-16T22:05:52+00:00"
         },
         {
-            "name": "onetoefoot/tasks",
-            "version": "dev-master",
-            "dist": {
-                "type": "path",
-                "url": "../../packages/onetoefoot/tasks",
-                "reference": "9a901c73277bbacd01f8325bd857663e2d282545",
-                "shasum": null
-            },
-            "require": {
-                "illuminate/support": "~5.5.0|~5.6.0",
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~3.5.0|~3.6.0",
-                "phpunit/phpunit": "^6.3|^7.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Onetoefoot\\Tasks\\TasksServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Onetoefoot\\Tasks\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Onetoefoot\\Tasks\\Test\\": "tests"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpunit"
-                ],
-                "test:windows": [
-                    "vendor\\bin\\phpunit"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "description": "Tasks"
-        },
-        {
             "name": "phar-io/manifest",
             "version": "1.0.3",
             "source": {
