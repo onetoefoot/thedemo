@@ -89556,6 +89556,164 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/assets/scripts/accesstoken/index.js":
+/***/ (function(module, exports) {
+
+// $(document).ready(function(){
+
+//     window.axios = require('axios');
+
+//     window.axios.defaults.headers.common = {
+//         'X-Requested-With': 'XMLHttpRequest'
+//     };
+
+//     var PersonalAccessToken = {
+
+//         /*
+//          * The component's data.
+//          */
+//         data() {
+//             return {
+//                 accessToken: null,
+
+//                 tokens: [],
+//                 scopes: [],
+
+//                 form: {
+//                     name: '',
+//                     scopes: [],
+//                     errors: []
+//                 }
+//             };
+//         },
+
+//         /**
+//          * Prepare the component.
+//          */
+//         prepareComponent() {
+//             this.getTokens();
+//             this.getScopes();
+
+//             $('#modal-create-token').on('shown.bs.modal', () => {
+//                 $('#create-token-name').focus();
+//             });
+//         },
+
+//         /**
+//          * Get all of the personal access tokens for the user.
+//          */
+//         getTokens() {
+//             axios.get('/oauth/personal-access-tokens')
+//                     .then(response => {
+//                         this.tokens = response.data;
+//                         console.log(this.tokens)
+//                     });
+//         },
+
+//         /**
+//          * Get all of the available scopes.
+//          */
+//         getScopes() {
+//             axios.get('/oauth/scopes')
+//                     .then(response => {
+//                         this.scopes = response.data;
+//                         console.log(this.scopes);
+//                     });
+//         },
+
+//         /**
+//          * Show the form for creating new tokens.
+//          */
+//         showCreateTokenForm() {
+//             $('#modal-create-token').modal('show');
+//         },
+
+//         /**
+//          * Create a new personal access token.
+//          */
+//         store() {
+//             this.accessToken = null;
+
+//             this.form.errors = [];
+
+//             axios.post('/oauth/personal-access-tokens', this.form)
+//                     .then(response => {
+//                         this.form.name = '';
+//                         this.form.scopes = [];
+//                         this.form.errors = [];
+
+//                         this.tokens.push(response.data.token);
+
+//                         this.showAccessToken(response.data.accessToken);
+//                     })
+//                     .catch(error => {
+//                         if (typeof error.response.data === 'object') {
+//                             this.form.errors = _.flatten(_.toArray(error.response.data.errors));
+//                         } else {
+//                             this.form.errors = ['Something went wrong. Please try again.'];
+//                         }
+//                     });
+//         },
+
+//         /**
+//          * Toggle the given scope in the list of assigned scopes.
+//          */
+//         toggleScope(scope) {
+//             if (this.scopeIsAssigned(scope)) {
+//                 this.form.scopes = _.reject(this.form.scopes, s => s == scope);
+//             } else {
+//                 this.form.scopes.push(scope);
+//             }
+//         },
+
+//         /**
+//          * Determine if the given scope has been assigned to the token.
+//          */
+//         scopeIsAssigned(scope) {
+//             return _.indexOf(this.form.scopes, scope) >= 0;
+//         },
+
+//         /**
+//          * Show the given access token to the user.
+//          */
+//         showAccessToken(accessToken) {
+//             $('#modal-create-token').modal('hide');
+
+//             this.accessToken = accessToken;
+
+//             $('#modal-access-token').modal('show');
+//         },
+
+//         /**
+//          * Revoke the given token.
+//          */
+//         revoke(token) {
+//             axios.delete('/oauth/personal-access-tokens/' + token.id)
+//                     .then(response => {
+//                         this.getTokens();
+//                     });
+//         }
+//     };
+
+//     PersonalAccessToken.prepareComponent();
+//     $(document).on('click', '#showCreateTokenForm', function(){
+//         PersonalAccessToken.showCreateTokenForm();
+//     });
+
+//     axios.get('/oauth/scopes')
+//     .then(response => {
+//         console.log(response.data);
+//     });
+
+//     axios.get('/oauth/personal-access-tokens')
+//     .then(response => {
+//         console.log(response.data);
+//     });
+
+// });
+
+/***/ }),
+
 /***/ "./resources/assets/scripts/charts/chartJS/index.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -90447,22 +90605,10 @@ var hljs = __webpack_require__("./node_modules/highlight.js/lib/highlight.js");
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__base__ = __webpack_require__("./resources/assets/scripts/_base.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__accesstoken__ = __webpack_require__("./resources/assets/scripts/accesstoken/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__accesstoken___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__accesstoken__);
 
 
-// Vue.component(
-//     'passport-clients',
-//     require('./vue/components/passport/Clients.vue')
-// );
-
-// Vue.component(
-//     'passport-authorized-clients',
-//     require('./vue/components/passport/AuthorizedClients.vue')
-// );
-
-// Vue.component(
-//     'passport-personal-access-tokens',
-//     require('./vue/components/passport/PersonalAccessTokens.vue')
-// );
 
 /***/ }),
 

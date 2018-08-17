@@ -14,7 +14,7 @@
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                     <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="true">Profile</a>
                                     <a class="nav-item nav-link" id="nav-information-tab" data-toggle="tab" href="#nav-information" role="tab" aria-controls="nav-information" aria-selected="false">Information</a>
-                                    <a class="nav-item nav-link" id="nav-tokenaccess-tab" data-toggle="tab" href="#nav-tokenaccess" role="tab" aria-controls="nav-tokenaccess" aria-selected="false">Token Access</a>
+                                    <a class="nav-item nav-link" id="nav-personalaccesstoken-tab" data-toggle="tab" href="#nav-personalaccesstoken" role="tab" aria-controls="nav-personalaccesstoken" aria-selected="false">Access Token</a>
                                     <a class="nav-item nav-link" id="nav-changepassword-tab" data-toggle="tab" href="#nav-changepassword" role="tab" aria-controls="nav-changepassword" aria-selected="false">Change Password</a>
                                 </div>
                             </nav>
@@ -59,12 +59,6 @@
                                         ])
                                         @include('includes.forms.validation', ['fieldname' => 'name'])
                                     </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="nav-tokenaccess" role="tabpanel" aria-labelledby="nav-tokenaccess-tab">
-                                    <passport-clients></passport-clients>
-                                    <passport-authorized-clients></passport-authorized-clients>
-                                    <passport-personal-access-tokens></passport-personal-access-tokens>
                                 </div>
                                 
                                 <div class="tab-pane fade" id="nav-changepassword" role="tabpanel" aria-labelledby="nav-changepassword-tab">
