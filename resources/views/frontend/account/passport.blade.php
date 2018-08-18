@@ -2,8 +2,8 @@
 
 @section('content')
 
-    @include('frontend.account.authorized_clients')
-
-    @include('frontend.account.clients')
+    <passport-clients></passport-clients>
+    <passport-authorized-clients></passport-authorized-clients>
+    <passport-personal-access-tokens></passport-personal-access-tokens>
 
 @endsection

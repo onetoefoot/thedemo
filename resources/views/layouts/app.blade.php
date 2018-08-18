@@ -23,7 +23,7 @@
             });
         </script>
 
-        <div>
+        <div id="app">
           @include('includes.sidebar')
           <div class="page-container">
               @include('includes.nav')

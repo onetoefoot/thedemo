@@ -9,7 +9,7 @@
         @yield('meta')
         <link href="{{ mix('css/index_guest.css') }}" rel="stylesheet">
     </head>
-    <body>
+    <body id="app">
         <div id='loader'>
             <div class="spinner"></div>
         </div>
@@ -26,7 +26,7 @@
         @include('includes.nav-guest')
 
         <!-- <div class="flex-center position-ref full-height"> -->
-        <main role="main" class="container">
+        <main role="main" class="container" id="app">
             <div class="container-fluid">
                 @yield('content')
             </div>

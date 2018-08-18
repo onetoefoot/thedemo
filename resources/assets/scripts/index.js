@@ -1,2 +1,2 @@
 import './_base';
-import './accesstoken';
+import './passport';
