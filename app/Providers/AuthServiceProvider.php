@@ -26,7 +26,9 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Passport::routes();
+        \Route::group(['middleware' => 'tenancy.enforce'], function () {
+            Passport::routes();
+        });
 
         Passport::tokensCan([
             'sample-identifier' => 'Sample Identifier'
