@@ -52,6 +52,8 @@
 
 <script>
     export default {
+        name: 'passport-authorized-clients',
+
         /*
          * The component's data.
          */

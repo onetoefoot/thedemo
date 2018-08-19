@@ -9,7 +9,7 @@
         @yield('meta')
         <link href="{{ mix('css/index_guest.css') }}" rel="stylesheet">
     </head>
-    <body id="app">
+    <body>
         <div id='loader'>
             <div class="spinner"></div>
         </div>

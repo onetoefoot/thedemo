@@ -212,6 +212,8 @@
 
 <script>
     export default {
+        name: 'passport-clients',
+
         /*
          * The component's data.
          */

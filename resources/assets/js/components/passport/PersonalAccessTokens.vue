@@ -156,6 +156,8 @@
 
 <script>
     export default {
+        name: 'passport-personal-access-tokens',
+
         /*
          * The component's data.
          */

@@ -5,11 +5,11 @@ window.Popper = require('popper.js').default;
 /**
  * Font Awesome 5
  */
-import { library, dom } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+// import { library, dom } from '@fortawesome/fontawesome-svg-core'
+// import { fas } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(fas)
+// library.add(fas)
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
