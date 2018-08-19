@@ -886,16 +886,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.4",
+            "version": "2.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "8790f594151ca6a2010c6218e09d96df67173ad3"
+                "reference": "54859fabea8b3beecbb1a282888d5c990036b9e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/8790f594151ca6a2010c6218e09d96df67173ad3",
-                "reference": "8790f594151ca6a2010c6218e09d96df67173ad3",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/54859fabea8b3beecbb1a282888d5c990036b9e3",
+                "reference": "54859fabea8b3beecbb1a282888d5c990036b9e3",
                 "shasum": ""
             },
             "require": {
@@ -939,7 +939,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2018-04-10T10:11:19+00:00"
+            "time": "2018-08-16T20:49:45+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -2718,14 +2718,12 @@
             "dist": {
                 "type": "path",
                 "url": "../../packages/onetoefoot/docs",
-                "reference": "d4f4e984df446d1e2b3e953f7be59d34520d0758",
+                "reference": "3d53ab50e1b4375d4045c0fade6d074a680d942b",
                 "shasum": null
             },
             "require": {
                 "components/highlightjs": "^9.12",
-                "illuminate/support": "~5.5.0|~5.6.0",
-                "league/commonmark": "^0.17.5",
-                "php": "^7.1"
+                "league/commonmark": "^0.17.5"
             },
             "type": "library",
             "extra": {
@@ -2763,7 +2761,7 @@
             "dist": {
                 "type": "path",
                 "url": "../../packages/onetoefoot/sampleidentifier",
-                "reference": "2578a33eb397462e8bc8bb5efe7db5f4fdbc2657",
+                "reference": "b6e63113d509607027d181eb29768b06b16f2d41",
                 "shasum": null
             },
             "require": {
