@@ -24,16 +24,12 @@
                     <img class="w-2r bdrs-50p" src="{{ Auth::user()->getFirstMediaUrl('avatar', 'thumb') }} " alt="">
                   </div>
                   <div class="peer">
-                    <span class="fsz-sm c-grey-900">{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->email }}}</span>
+                    <span class="arrow">
+                      <i class="ti-angle-down"></i>
+                    </span>
                   </div>
                 </a>
                 <ul class="dropdown-menu fsz-sm">
-                  <!-- <li>
-                    <a href="" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
-                      <i class="ti-settings mR-10"></i>
-                      <span>{{ __('Settings') }} </span>
-                    </a>
-                  </li> -->
                   <li>
                     <a href="{{ route('account.profile.edit') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
                       <i class="ti-user mR-10"></i>

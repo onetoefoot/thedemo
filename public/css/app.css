@@ -85598,6 +85598,14 @@ legend {
   font-size: 1em;
 }
 
+.header.navbar .header-container i.ti-angle-down {
+  font-size: 10px;
+  line-height: 40px;
+  right: 30px;
+  -webkit-transition: all 0.05s ease-in;
+  transition: all 0.05s ease-in;
+}
+
 html,
 body {
   font-family: "Whitney SSm A","Whitney SSm B",sans-serif;

@@ -25,7 +25,7 @@
 
         <div>
           @include('includes.sidebar')
-          <div class="page-container">
+          <div class="page-container" id="app">
               @include('includes.nav')
               <main class='main-content bgc-grey-100'>
                   <div id='mainContent'>

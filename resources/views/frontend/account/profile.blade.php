@@ -12,15 +12,14 @@
 
                             <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="true">Profile</a>
+                                    <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="true">Profile</a>
                                     <a class="nav-item nav-link" id="nav-information-tab" data-toggle="tab" href="#nav-information" role="tab" aria-controls="nav-information" aria-selected="false">Information</a>
-                                    <a class="nav-item nav-link" id="nav-personalaccesstoken-tab" data-toggle="tab" href="#nav-personalaccesstoken" role="tab" aria-controls="nav-personalaccesstoken" aria-selected="false">Access Token</a>
                                     <a class="nav-item nav-link" id="nav-changepassword-tab" data-toggle="tab" href="#nav-changepassword" role="tab" aria-controls="nav-changepassword" aria-selected="false">Change Password</a>
                                 </div>
                             </nav>
                             
                             <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <div class="tab-pane fade active show" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 
                                     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                                         @include('includes.forms.field-text', [
