@@ -45,20 +45,20 @@
                   <li>
                     <a href="{{ route('account.profile.edit') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-900">
                       <i class="ti-user mR-10"></i>
-                      <span>{{ __('Account') }} </span>
+                      <span>{{ __('ACCOUNT') }} </span>
                     </a>
                   </li>
                   <li>
                     <a href="{{ route('users.index') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-900">
                       <i class="ti-user mR-10"></i>
-                      <span>{{ __('Users') }} </span>
+                      <span>{{ __('USERS') }} </span>
                     </a>
                   </li>
                   <li>
                     <a href="{{ route('logout') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-900"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                       <i class="ti-power-off mR-10"></i>
-                      <span>{{ __('Logout') }}</span>
+                      <span>{{ __('LOGOUT') }}</span>
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf

@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', '| ' . __('Add User') )
+@section('title', '| ' . __('ADD USER') )
 
 @section('content')
             <div class="container masonry-item col-md-8 profile">
                 <div class="bgc-white p-20 bd">
                     <h4 class="c-grey-900">
-                        <i class="ti-user"></i> {{ __('Add User') }} 
-                        <a href="{{ route('users.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('Cancel')}}</a>
+                        <i class="ti-user"></i> {{ __('ADD USER') }} 
+                        <a href="{{ route('users.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('CANCEL')}}</a>
                     </h4>
                     <div class="mT-30">
 

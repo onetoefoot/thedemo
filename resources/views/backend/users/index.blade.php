@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '| ' . __('Users'))
+@section('title', '| ' . __('USERS'))
 
 @section('content')
 
@@ -8,9 +8,9 @@
     <div class="col-md-12">
         <div class="bgc-white bd bdrs-3 p-20 mB-20">
         <h4 class="c-grey-900 mB-20">
-            <i class="ti-user"></i> {{ __('Users')}} 
-            <a href="{{ route('roles.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('Roles')}}</a>
-            <a href="{{ route('permissions.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('Permissions')}}</a>
+            <i class="ti-user"></i> {{ __('USERS')}} 
+            <a href="{{ route('roles.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('ROLES')}}</a>
+            <a href="{{ route('permissions.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('PERMISSIONS')}}</a>
         </h4>
         <table id="users-table" class="table table-striped table-bordered table-hover user-table" data-toggle="dataTable" data-form="deleteForm">
 
