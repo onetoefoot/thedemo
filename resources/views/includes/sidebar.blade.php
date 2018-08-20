@@ -34,7 +34,7 @@
             <li class="nav-item mT-30">
               <a class="sidebar-link" href="{{ url('/dashboard') }}">
                 <span class="icon-holder">
-                  <i class="c-grey-500 ti-home"></i>
+                  <i class="c-grey-900 ti-home"></i>
                 </span>
                 <span class="title">{{ __('Dashboard') }}</span>
               </a>
@@ -43,7 +43,7 @@
             <li class="nav-item">
               <a class='sidebar-link' href="{{ url('/sampleidentifier') }} ">
                 <span class="icon-holder">
-                  <i class="c-grey-500 ti-view-list-alt"></i>
+                  <i class="c-grey-900 ti-view-list-alt"></i>
                 </span>
                 <span class="title">{{__('Sample Identifier')}}</span>
               </a>
@@ -52,7 +52,7 @@
             <li class="nav-item dropdown">
               <a class="dropdown-toggle" href="javascript:void(0);">
                 <span class="icon-holder">
-                  <i class="c-grey-500 ti-help-alt"></i>
+                  <i class="c-grey-900 ti-help-alt"></i>
                 </span>
                 <span class="title">{{__('Help')}}</span>
                 <span class="arrow">

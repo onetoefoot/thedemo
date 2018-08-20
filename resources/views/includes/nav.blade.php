@@ -25,26 +25,37 @@
                   </div>
                   <div class="peer">
                     <span class="arrow">
-                      <i class="ti-angle-down"></i>
+                      <i id="user-dropdown-arrow" class="ti-angle-down"></i>
                     </span>
                   </div>
                 </a>
                 <ul class="dropdown-menu fsz-sm">
+                  <li class="nav-li">
+                    <a href="{{ route('account.profile.edit') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-900">
+                      <div class="peer position-absolute">
+                        <img class="w-2r bdrs-50p mt-1" src="{{ Auth::user()->getFirstMediaUrl('avatar', 'thumb') }} " alt="">
+                      </div>
+                      <div class="peer ml-5">
+                        <span class="user-name">{{ Auth::user()->name }}</span>
+                        <span class="user-email text-muted">{{ Auth::user()->email }}</span>
+                    </div>
+                    </a>
+                  </li>
+                  <li role="separator" class="divider"></li>
                   <li>
-                    <a href="{{ route('account.profile.edit') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                    <a href="{{ route('account.profile.edit') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-900">
                       <i class="ti-user mR-10"></i>
                       <span>{{ __('Account') }} </span>
                     </a>
                   </li>
                   <li>
-                    <a href="{{ route('users.index') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700">
+                    <a href="{{ route('users.index') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-900">
                       <i class="ti-user mR-10"></i>
                       <span>{{ __('Users') }} </span>
                     </a>
                   </li>
-                  <li role="separator" class="divider"></li>
                   <li>
-                    <a href="{{ route('logout') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-700"
+                    <a href="{{ route('logout') }}" class="d-b td-n pY-5 bgcH-grey-100 c-grey-900"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                       <i class="ti-power-off mR-10"></i>
                       <span>{{ __('Logout') }}</span>

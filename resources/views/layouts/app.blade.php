@@ -36,7 +36,6 @@
           </div>
         </div>
 
-
         @include('cookieConsent::index')
         <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
     </body>

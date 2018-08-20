@@ -1,9 +1,3 @@
-.navbar-laravel {
-  background-color: #fff;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -85515,103 +85509,12 @@ table.dataTable.no-footer {
   }
 }
 
-.logo .circle {
-  width: 50px;
-  height: 50px;
-  background-color: #7F2121;
-  border-radius: 50%;
-  text-align: center;
-  margin-top: 5px;
-}
-
-.logo .circle .text {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  color: #fff;
-}
-
-.profile .tab-content {
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 10px;
-}
-
-.profile .nav-tabs {
-  margin-bottom: 0;
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button.current {
-  background: #2196f3;
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
-  background: #2196f3;
-}
-
-.form-button-delete,
-.form-button-delete:hover {
-  text-decoration: none;
-}
-
-.form-a-link {
-  font-size: .7em;
-}
-
-input[type='text'],
-input[type='email'],
-input[type='number'],
-input[type='password'],
-textarea {
-  outline: none;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-  border: 1px solid #ccc !important;
-}
-
-.btn,
-.btn:hover,
-.btn:active,
-.btn:active:focus,
-.btn:visited,
-.btn:focus,
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:active:focus,
-.btn-primary:visited,
-.btn-primary:focus,
-button,
-button:hover,
-button:active,
-button:active:focus,
-button:visited,
-button:focus {
-  outline: none !important;
-  box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-}
-
-legend {
-  font-size: 1em;
-}
-
-.header.navbar .header-container i.ti-angle-down {
-  font-size: 10px;
-  line-height: 40px;
-  right: 30px;
-  -webkit-transition: all 0.05s ease-in;
-  transition: all 0.05s ease-in;
-}
-
 html,
 body {
   font-family: "Whitney SSm A","Whitney SSm B",sans-serif;
   background: #fafafa;
   color: #525252;
-  font-weight: 100;
+  font-weight: 500;
   height: 100vh;
   margin: 0;
   font-size: 16px;
@@ -85876,5 +85779,191 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 .hljs-strong {
   font-weight: bold;
+}
+
+.logo .circle {
+  width: 50px;
+  height: 50px;
+  background-color: #7F2121;
+  border-radius: 50%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.logo .circle .text {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+}
+
+.profile .tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.profile .nav-tabs {
+  margin-bottom: 0;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: #2196f3;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: #2196f3;
+}
+
+.form-button-delete,
+.form-button-delete:hover {
+  text-decoration: none;
+}
+
+.form-a-link {
+  font-size: .7em;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+textarea {
+  outline: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: 1px solid #ccc !important;
+}
+
+.btn,
+.btn:hover,
+.btn:active,
+.btn:active:focus,
+.btn:visited,
+.btn:focus,
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:active:focus,
+.btn-primary:visited,
+.btn-primary:focus,
+button,
+button:hover,
+button:active,
+button:active:focus,
+button:visited,
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+legend {
+  font-size: 1em;
+}
+
+.header {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.header span.badge-notify {
+  position: relative;
+  border: 1px solid #cccccc;
+  background: #FFF;
+  color: #424242;
+  font-size: 9px !important;
+  width: 20px;
+  height: 20px;
+  line-height: 15px;
+  border-radius: 50%;
+  top: -10px;
+  right: 25px;
+}
+
+.header button,
+.header button:hover,
+.header .btn,
+.header .btn:hover {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+.header .profile {
+  margin-top: 8px;
+}
+
+.header .navbar .header-container i.ti-angle-down,
+.header .navbar .header-container i.ti-angle-up {
+  font-size: 10px;
+  line-height: 40px;
+  right: 30px;
+  -webkit-transition: all 0.05s ease-in;
+  transition: all 0.05s ease-in;
+}
+
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 320px;
+  height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+  padding: 15px 15px 80px;
+}
+
+/*Left*/
+
+.modal.left.fade .modal-dialog {
+  left: -320px;
+  -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+  transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.fade.in .modal-dialog {
+  left: 0;
+}
+
+/*Right*/
+
+.modal.right.fade .modal-dialog {
+  right: inherit;
+  -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+  transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+  right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-header {
+  border-bottom-color: #EEEEEE;
+  background-color: #FAFAFA;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
 }
 

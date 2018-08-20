@@ -14,3 +14,4 @@ import './fullcalendar';
 import './utils';
 import './deleteForm';
 import './highlightjs';
+import './custom';
