@@ -3,8 +3,8 @@
 namespace Tests;
 
 use App\Http\Middleware\VerifyCsrfToken;
-use App\Tenant;
-use App\User;
+use App\Models\Tenant;
+use App\Models\User;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 

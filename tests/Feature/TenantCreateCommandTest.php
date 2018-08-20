@@ -3,8 +3,8 @@
 namespace Tests\Feature;
 
 use App\Notifications\TenantCreated;
-use App\Tenant;
-use App\User;
+use App\Models\Tenant;
+use App\Models\User;
 use Illuminate\Support\Facades\Notification;
 use Tests\TenantAwareTestCase;
 
@@ -20,47 +20,47 @@ class TenantCreateCommandTest extends TenantAwareTestCase
     public function tenant_name_is_required()
     {
         $this->expectExceptionMessage('Not enough arguments (missing: "name").');
-        $this->artisan('tenant:create', ['email' => 'test@example.com']);
+        $this->artisan('tenant:create', ['email' => 'test@example.com', 'password' => 'password']);
     }
 
     /** @test */
     public function tenant_email_is_required()
     {
         $this->expectExceptionMessage('Not enough arguments (missing: "email").');
-        $this->artisan('tenant:create', ['name' => 'example']);
+        $this->artisan('tenant:create', ['name' => 'example', 'password' => 'password']);
     }
 
     /** @test */
     public function can_create_new_tenant()
     {
-        $this->artisan('tenant:create', ['name' => 'example', 'email' => 'test@example.com']);
+        $this->artisan('tenant:create', ['name' => 'example', 'email' => 'test@example.com', 'password' => 'password']);
         $this->assertDatabaseHas('users', ['name' => 'example', 'email' => 'test@example.com']);
     }
 
     // /** @test */
-    // public function tenant_has_admin()
-    // {
-    //     $this->artisan('tenant:create', ['name' => 'example', 'email' => 'test@example.com']);
-    //     $this->assertDatabaseHas('users', ['email' =>  'test@example.com']);
-    // }
+    public function tenant_has_admin()
+    {
+        $this->artisan('tenant:create', ['name' => 'example', 'email' => 'test@example.com', 'password' => 'password']);
+        $this->assertDatabaseHas('users', ['email' =>  'test@example.com']);
+    }
 
     // /** @test */
-    // public function admin_has_proper_roles()
-    // {
-    //     $this->artisan('tenant:create', ['name' => 'example', 'email' => 'test@example.com']);
-    //     $user = User::where('email', 'test@example.com')->firstOrFail();
-    //     $this->assertTrue($user->hasRole('admin'));
-    //     $this->assertTrue($user->hasPermissionTo('edit user'));
-    //     $this->assertTrue($user->hasPermissionTo('create user'));
-    //     $this->assertTrue($user->hasPermissionTo('delete user'));
-    // }
+    public function admin_has_proper_roles()
+    {
+        $this->artisan('tenant:create', ['name' => 'example', 'email' => 'test@example.com', 'password' => 'password']);
+        $user = User::where('email', 'test@example.com')->firstOrFail();
+        $this->assertTrue($user->hasRole('admin'));
+        $this->assertTrue($user->hasPermissionTo('edit user'));
+        $this->assertTrue($user->hasPermissionTo('create user'));
+        $this->assertTrue($user->hasPermissionTo('delete user'));
+    }
 
     // /** @test */
-    // public function admin_is_invited()
-    // {
-    //     $this->artisan('tenant:create', ['name' => 'example', 'email' => 'test@example.com']);
-    //     Notification::assertSentTo(User::where('email', 'test@example.com')->get(), TenantCreated::class);
-    // }
+    public function admin_is_invited()
+    {
+        $this->artisan('tenant:create', ['name' => 'example', 'email' => 'test@example.com', 'password' => 'password']);
+        Notification::assertSentTo(User::where('email', 'test@example.com')->get(), TenantCreated::class);
+    }
 
     protected function tearDown()
     {

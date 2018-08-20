@@ -58,10 +58,8 @@ class RoleController extends Controller
         $permissions = $request['permissions'];
 
         $role->save();
-    //Looping thru selected permissions
         foreach ($permissions as $permission) {
             $p = Permission::where('id', '=', $permission)->firstOrFail(); 
-         //Fetch the newly created role and assign permission
             $role = Role::where('name', '=', $name)->first(); 
             $role->givePermissionTo($p);
         }
@@ -105,8 +103,7 @@ class RoleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $role = Role::findOrFail($id);//Get role with the given id
-    //Validate name and permission fields
+        $role = Role::findOrFail($id);
         $this->validate($request, [
             'name'=>'required|max:10|unique:roles,name,'.$id,
             'permissions' =>'required',

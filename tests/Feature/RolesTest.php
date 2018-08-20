@@ -2,13 +2,11 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Models\Role;
 use Hyn\Tenancy\Environment;
-use App\Role;
+use Tests\TenantAwareTestCase;
 
-class RolesTest extends TestCase
+class RolesTest extends TenantAwareTestCase
 {
     /**
      * A basic test example.
@@ -19,4 +17,5 @@ class RolesTest extends TestCase
     {
         $this->assertTrue(true);
     }
+
 }
