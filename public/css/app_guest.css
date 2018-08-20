@@ -85904,9 +85904,8 @@ legend {
   margin-top: 8px;
 }
 
-.header i.user-dropdown-arrow.ti-angle-down,
-.header i.user-dropdown-arrow.ti-angle-up {
-  font-size: 10px;
+.header .header-container .nav-right > li > a i {
+  font-size: 10px !important;
   line-height: 40px;
   right: 30px;
   -webkit-transition: all 0.05s ease-in;
@@ -86007,9 +86006,8 @@ legend {
   margin-top: 8px;
 }
 
-.header i.user-dropdown-arrow.ti-angle-down,
-.header i.user-dropdown-arrow.ti-angle-up {
-  font-size: 10px;
+.header .header-container .nav-right > li > a i {
+  font-size: 10px !important;
   line-height: 40px;
   right: 30px;
   -webkit-transition: all 0.05s ease-in;
