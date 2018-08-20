@@ -12,7 +12,7 @@
             <a href="{{ route('users.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('Users')}}</a>
             <a href="{{ route('permissions.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('Permissions')}}</a>
         </h4>
-        <table id="dataTable" class="table table-striped table-bordered table-hover role-table" data-toggle="dataTable" data-form="deleteForm">
+        <table id="roles-table" class="table table-striped table-bordered table-hover role-table" data-toggle="dataTable" data-form="deleteForm">
 
             <thead>
                 <tr>

@@ -25,6 +25,9 @@ Route::group(['middleware' => 'tenancy.enforce'], function () {
             Route::resource('roles', 'RoleController');
             Route::resource('permissions', 'PermissionController');
             Route::resource('activity-log', 'ActivityLogController');
+            Route::prefix('ajax')->group(function() {
+                Route::resource('roles', 'RoleController', ['as' => 'ajax']);
+            });
         });
     });
 });
