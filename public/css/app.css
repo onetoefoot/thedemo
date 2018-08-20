@@ -85781,6 +85781,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   font-weight: bold;
 }
 
+/*change the hover text color*/
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background-color: #0c83e2;
+  border-color: #0c7cd5;
+}
+
+/*change style when active*/
+
 .logo .circle {
   width: 50px;
   height: 50px;
@@ -85895,8 +85904,8 @@ legend {
   margin-top: 8px;
 }
 
-.header .navbar .header-container i.ti-angle-down,
-.header .navbar .header-container i.ti-angle-up {
+.header i.user-dropdown-arrow.ti-angle-down,
+.header i.user-dropdown-arrow.ti-angle-up {
   font-size: 10px;
   line-height: 40px;
   right: 30px;

@@ -63,8 +63,8 @@ class UserController extends Controller
 
         if (isset($roles)) {
             foreach ($roles as $role) {
-            $role_r = Role::where('id', '=', $role)->firstOrFail();            
-            $user->assignRole($role_r);
+                $role_r = Role::where('id', '=', $role)->firstOrFail();            
+                $user->assignRole($role_r);
             }
         }
 
