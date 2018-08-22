@@ -9,7 +9,7 @@
         @yield('meta')
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     </head>
-    <body>
+    <body class="app" data-gr-c-s-loaded="true">
         <div id='loader'>
             <div class="spinner"></div>
         </div>

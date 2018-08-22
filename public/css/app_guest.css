@@ -86082,16 +86082,7 @@ legend {
   width: 100% !important;
 }
 
-nav {
-  background-color: #fff;
-  height: 65px;
-}
-
-.container {
-  margin-top: 65px;
-}
-
-.header {
-  width: 100% !important;
+.navbar {
+  padding: 1rem 1rem;
 }
 
