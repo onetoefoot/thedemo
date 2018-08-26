@@ -14,7 +14,7 @@
                             {{ csrf_field() }}
                             {{ method_field('PATCH') }}
 
-                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('name') ? ' alert alert-dangerr' : '' }}">
                                 @include('includes.forms.field-text', [
                                     'fieldName' => 'name', 'displayName' => __('Name'),
                                     'iconClass' => 'ti-key', 'placeholder' => __('John Doe'),
@@ -22,7 +22,7 @@
                                 ])
                                 @include('includes.forms.validation', ['fieldname' => 'name'])
                             </div>
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('email') ? ' alert alert-dangerr' : '' }}">
                                 @include('includes.forms.field-text', [
                                     'fieldName' => 'email', 'displayName' => __('E-Mail Address'),
                                     'iconClass' => 'ti-email', 'placeholder' => __('John.Doe@domain.com'),

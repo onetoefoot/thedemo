@@ -31,7 +31,7 @@
                             @endif
 
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label class="text-normal text-dark">{{ __('Password') }}</label>
                             <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
                                 name="password" placeholder="Password" required>
@@ -50,7 +50,7 @@
                                     <strong>{{ $errors->first('password_confirmation') }}</strong>
                                 </span>
                             @endif
-                        </div>
+                        </div> -->
                         <div class="form-group text-right">
                             <button class="btn btn-primary">{{ __('Register') }}</button>
                         </div>

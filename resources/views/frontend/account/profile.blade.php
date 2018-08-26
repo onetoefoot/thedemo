@@ -21,7 +21,7 @@
                             <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade active show" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 
-                                    <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                                    <div class="form-group{{ $errors->has('name') ? ' alert alert-danger' : '' }}">
                                         @include('includes.forms.field-text', [
                                             'fieldName' => 'name', 'displayName' => __('Name'),
                                             'iconClass' => 'ti-user', 'placeholder' => __('Jon Name'),
@@ -29,7 +29,7 @@
                                         ])
                                         @include('includes.forms.validation', ['fieldname' => 'name'])
                                     </div>
-                                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                    <div class="form-group{{ $errors->has('email') ? ' alert alert-danger' : '' }}">
                                         @include('includes.forms.field-text', [
                                             'fieldName' => 'email', 'displayName' => __('E-Mail Address'),
                                             'iconClass' => 'ti-email', 'placeholder' => __('John.Doe@domain.com'),
@@ -50,7 +50,7 @@
                                         @include('includes.forms.validation', ['fieldname' => 'name'])
                                     </div>
 
-                                    <div class="form-group{{ $errors->has('timezone') ? ' has-error' : '' }}">
+                                    <div class="form-group{{ $errors->has('timezone') ? ' alert alert-danger' : '' }}">
                                         @include('includes.forms.field-select', [
                                             'fieldName' => 'timezone', 'displayName' => __('Timezone'),
                                             'iconClass' => 'ti-time', 'placeholder' => __('Timezone'),

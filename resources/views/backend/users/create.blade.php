@@ -14,7 +14,7 @@
                         <form method="POST" action=" {{route('users.store')}} " accept-charset="UTF-8">
                             {{ csrf_field() }}
 
-                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('name') ? ' alert alert-danger' : '' }}">
                                 @include('includes.forms.field-text', [
                                     'fieldName' => 'name', 'displayName' => __('Name'),
                                     'iconClass' => 'ti-key', 'placeholder' => __('John Doe'),
@@ -22,7 +22,7 @@
                                 ])
                                 @include('includes.forms.validation', ['fieldname' => 'name'])
                             </div>
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('email') ? ' alert alert-danger' : '' }}">
                                 @include('includes.forms.field-text', [
                                     'fieldName' => 'email', 'displayName' => __('E-Mail Address'),
                                     'iconClass' => 'ti-email', 'placeholder' => __('John.Doe@domain.com'),

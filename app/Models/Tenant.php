@@ -39,10 +39,10 @@ class Tenant
         $baseUrl = config('app.url_base');
         $hostname->fqdn = "{$name}.{$baseUrl}";
         app(HostnameRepository::class)->attach($hostname, $website);
+
         // make hostname current
         app(Environment::class)->hostname($hostname);
 
-        $password = 'password';
         $admin = static::makeAdmin($website, $name, $email, $password ?: str_random());
 
         return new Tenant($website, $hostname, $admin);

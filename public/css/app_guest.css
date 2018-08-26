@@ -85998,6 +85998,10 @@ legend {
     padding-bottom: 26.5px;
     line-height: 27px;
   }
+
+  div#navbarCollapse.navbar-collapse.collapse.show {
+    padding-left: 25px;
+  }
 }
 
 .header {
@@ -86124,6 +86128,10 @@ legend {
     padding-top: 26.5px;
     padding-bottom: 26.5px;
     line-height: 27px;
+  }
+
+  div#navbarCollapse.navbar-collapse.collapse.show {
+    padding-left: 25px;
   }
 }
 

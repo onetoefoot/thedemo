@@ -15,7 +15,7 @@
                         <form method="POST" action=" {{route('permissions.store')}} " accept-charset="UTF-8">
                                 {{ csrf_field() }}
 
-                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('name') ? ' alert alert-danger' : '' }}">
                                 @include('includes.forms.field-text', [
                                     'fieldName' => 'name', 'displayName' => __('Name'),
                                     'iconClass' => 'ti-key', 'placeholder' => __('Permission Name'),

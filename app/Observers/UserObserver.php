@@ -16,7 +16,7 @@ class UserObserver
     public function created(User $user)
     {
         // Add default avatar
-        $user->addMedia(resource_path('assets/img/blank-profile-picture.png'))
+        $thumb_status = $user->addMedia(resource_path('assets/img/blank-profile-picture.png'))
             ->preservingOriginal()
             ->toMediaCollection('avatar');
 

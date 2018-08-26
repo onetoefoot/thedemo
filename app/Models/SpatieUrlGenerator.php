@@ -14,7 +14,7 @@ class SpatieUrlGenerator extends BaseUrlGenerator
      */
     public function getUrl() : string
     {
-        return config('app.url').'/'.$this->getPathRelativeToRoot();
+        return config('app.url').'/storage/'.$this->getPathRelativeToRoot();
     }
 
     /**

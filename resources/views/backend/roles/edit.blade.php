@@ -14,7 +14,7 @@
                             {{ csrf_field() }}
                             {{ method_field('PATCH') }}
 
-                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('name') ? ' alert alert-danger' : '' }}">
                                 @include('includes.forms.field-text', [
                                     'fieldName' => 'name', 'displayName' => __('Name'),
                                     'iconClass' => 'ti-key', 'placeholder' => __('Role Name'),
