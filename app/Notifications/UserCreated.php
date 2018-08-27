@@ -51,17 +51,4 @@ class UserCreated extends Notification
             ->line('To get started you need to set a password.')
             ->action('Set password', $resetUrl);
     }
-
-    /**
-     * Get the array representation of the notification.
-     *
-     * @param  mixed  $notifiable
-     * @return array
-     */
-    public function toArray($notifiable)
-    {
-        return [
-            //
-        ];
-    }
 }

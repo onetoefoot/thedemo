@@ -54,10 +54,15 @@ class UserController extends Controller
         $this->validate($request, [
             'name'=>'required|max:120',
             'email'=>'required|email|unique:users',
-            'password'=>'required|min:6|confirmed'
+            'password'=>'sometimes|min:6|confirmed'
         ]);
 
-        $user = User::create($request->only('email', 'name', 'password'));
+        $fields = ['name', 'email'];
+        if ($request->input['password'] != null) {
+            array_push($fields, 'password');
+        }
+
+        $user = User::create($request->only($fields));
 
         $roles = $request['roles'];
 

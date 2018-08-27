@@ -47,7 +47,7 @@
                                 </div>
                             </fieldset>
 
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 @include('includes.forms.field-text', [
                                     'fieldName' => 'password', 'displayName' => __('Password'), 'type' => 'password',
                                     'iconClass' => 'ti-key', 'placeholder' => '',
@@ -62,7 +62,7 @@
                                     'old' => '', 'required' => 'required'
                                 ])
                                 @include('includes.forms.validation', ['fieldname' => 'password_confirmation'])
-                            </div>
+                            </div> -->
 
                             <button type="submit" class="btn btn-primary">{{ __('Add User') }}</button>
                         </form>
