@@ -74,7 +74,7 @@ class UserController extends Controller
         }
 
         $tenancy = app(Environment::class);
-        $user->notify($tenancy->hostname()->fqdn);
+        $user->notify(new UserCreated($tenancy->hostname()->fqdn));
             
         return redirect()->route('users.index')
             ->with('flash_message',

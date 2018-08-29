@@ -5,9 +5,12 @@ namespace App\Notifications;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\Password;
+use Hyn\Tenancy\Traits\UsesTenantConnection;
 
 class UserCreated extends Notification
 {
+    use UsesTenantConnection;
+
     private $fqdn;
 
     /**
@@ -40,7 +43,7 @@ class UserCreated extends Notification
     public function toMail($notifiable)
     {
         $token = Password::broker()->createToken($notifiable);
-        $resetUrl = "http://{$fqdn}/password/reset/{$token}";
+        $resetUrl = "http://{$this->fqdn}/password/reset/{$token}";
 
         $app = config('app.name');
 
