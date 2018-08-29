@@ -10,12 +10,10 @@
                             {{ csrf_field() }}
                             {{ method_field('PATCH') }}
 
-                            <nav>
-                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="true">Profile</a>
-                                    <a class="nav-item nav-link" id="nav-information-tab" data-toggle="tab" href="#nav-information" role="tab" aria-controls="nav-information" aria-selected="false">Information</a>
-                                    <a class="nav-item nav-link" id="nav-changepassword-tab" data-toggle="tab" href="#nav-changepassword" role="tab" aria-controls="nav-changepassword" aria-selected="false">Change Password</a>
-                                </div>
+                            <nav class="nav nav-pills nav-tabs flex-columns flex-sm-row" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="true">Profile</a>
+                                <a class="nav-item nav-link" id="nav-information-tab" data-toggle="tab" href="#nav-information" role="tab" aria-controls="nav-information" aria-selected="false">Information</a>
+                                <a class="nav-item nav-link" id="nav-password-tab" data-toggle="tab" href="#nav-password" role="tab" aria-controls="nav-password" aria-selected="false">Password</a>
                             </nav>
                             
                             <div class="tab-content" id="nav-tabContent">
@@ -60,7 +58,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="tab-pane fade" id="nav-changepassword" role="tabpanel" aria-labelledby="nav-changepassword-tab">
+                                <div class="tab-pane fade" id="nav-password" role="tabpanel" aria-labelledby="nav-password-tab">
                                     <div class="form-group{{ $errors->has('password-current') ? ' is-invalid' : '' }}">
                                         @include('includes.forms.field-text', [
                                             'fieldName' => 'password-current', 'displayName' => __('Current Password'), 'type' => 'password',
