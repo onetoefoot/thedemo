@@ -10,9 +10,9 @@ npm install
 
 npm run dev
 
-artisan migrate
+php artisan migrate
 
-artisan passport:keys
+php artisan passport:keys
 
 Create your first tenant
 
