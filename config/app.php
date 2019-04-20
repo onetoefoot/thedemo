@@ -154,6 +154,7 @@ return [
         /*
          * Package Service Providers...
          */
+        onetoefoot\TheWriter\TheWriterServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 
         /*

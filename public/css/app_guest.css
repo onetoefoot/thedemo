@@ -87094,11 +87094,15 @@ legend {
 }
 
 .header .header-container .nav-right > li > a i {
-  font-size: 10px !important;
+  font-size: 24px;
   line-height: 40px;
   right: 30px;
   -webkit-transition: all 0.05s ease-in;
   transition: all 0.05s ease-in;
+}
+
+.header .header-container .nav-left > li > a i {
+  font-size: 24px;
 }
 
 .modal.left .modal-dialog,
@@ -87180,6 +87184,10 @@ legend {
   padding: 9px 10px !important;
 }
 
+.is-collapsed .sidebar .sidebar-inner .sidebar-menu li.dropdown .arrow {
+  margin-top: 8px;
+}
+
 @media (min-width: 768px) {
   .navbar-nav > li > a {
     /* (80px - line-height of 27px) / 2 = 26.5px */
@@ -87191,6 +87199,38 @@ legend {
   div#navbarCollapse.navbar-collapse.collapse.show {
     padding-left: 25px;
   }
+}
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/vendor/material-icons/iconMaterialIcons-Regular.eot?96c476804d7a788cc1c05351b287ee41);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(/fonts/vendor/material-icons/iconMaterialIcons-Regular.woff2?0509ab09c1b0d2200a4135803c91d6ce) format("woff2"), url(/fonts/vendor/material-icons/iconMaterialIcons-Regular.woff?29b882f018fa6fe75fd338aaae6235b8) format("woff"), url(/fonts/vendor/material-icons/iconMaterialIcons-Regular.ttf?d120c85b6eb0549d60483e2980033c15) format("truetype");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: 'liga';
+          font-feature-settings: 'liga';
 }
 
 .header {
@@ -87225,11 +87265,15 @@ legend {
 }
 
 .header .header-container .nav-right > li > a i {
-  font-size: 10px !important;
+  font-size: 24px;
   line-height: 40px;
   right: 30px;
   -webkit-transition: all 0.05s ease-in;
   transition: all 0.05s ease-in;
+}
+
+.header .header-container .nav-left > li > a i {
+  font-size: 24px;
 }
 
 .modal.left .modal-dialog,
@@ -87309,6 +87353,10 @@ legend {
   /* (80px - button height 34px) / 2 = 23px */
   margin-top: 23px;
   padding: 9px 10px !important;
+}
+
+.is-collapsed .sidebar .sidebar-inner .sidebar-menu li.dropdown .arrow {
+  margin-top: 8px;
 }
 
 @media (min-width: 768px) {

@@ -30,10 +30,13 @@
     .header-container {
 
         .nav-right > li > a i {
-            font-size: 10px !important;
+            font-size: 24px;
             line-height: 40px;
             right: 30px;
             transition: all 0.05s ease-in;
+        }    
+        .nav-left > li > a i {
+            font-size: 24px;
         }    
 
     }
@@ -120,6 +123,10 @@
     /* (80px - button height 34px) / 2 = 23px */
     margin-top: 23px;
     padding: 9px 10px !important;
+}
+
+.is-collapsed .sidebar .sidebar-inner .sidebar-menu li.dropdown .arrow {
+    margin-top: 8px;
 }
 
 @media (min-width: 768px) {
