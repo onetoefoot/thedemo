@@ -11,12 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Landing Page Routes
+Route::get('/', function () { return view('welcome'); });
+
+Route::domain('www.noeler.com')->group(function () { 
+
+    // Registration Routes...
+    Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+    Route::post('register', 'Auth\RegisterController@register');
+    
+    // Catch All Route
+    Route::any('{any}', function () {
+        abort(404);
+    })->where('any', '.*');
 });
 
 Route::group(['middleware' => 'tenancy.enforce'], function () {
-    Auth::routes();
     Route::get('/dashboard', 'DashboardController@index');
     Route::get('/account/passport', 'PassportController@index');
     Route::prefix('backend')->group(function () {
@@ -31,3 +41,14 @@ Route::group(['middleware' => 'tenancy.enforce'], function () {
         });
     });
 });
+
+// Authentication Web Routes
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+    
+// Password Reset Routes
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset');

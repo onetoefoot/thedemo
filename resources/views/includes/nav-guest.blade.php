@@ -19,12 +19,16 @@
                         <a class="nav-link"  href="{{ url('/dashboard') }}">{{ __('Dashboard') }}</a>
                     </li>
                     @else
-                    <li class="nav-item links">
-                        <a class="nav-link"  href="{{ url('/login') }}">{{ __('Login') }}</a>
-                    </li>
-                    <li class="nav-item links">
-                        <a class="nav-link"  href="{{ url('/register') }}">{{ __('Register') }}</a>
-                    </li>
+			    @if (request()->getHttpHost() !== 'www.noeler.com')
+			    <li class="nav-item links">
+				<a class="nav-link"  href="{{ url('/login') }}">{{ __('Login') }}</a>
+			    </li>
+			    @endif
+			    @if (request()->getHttpHost() === 'www.noeler.com')
+			    <li class="nav-item links">
+				<a class="nav-link"  href="{{ url('/register') }}">{{ __('Register') }}</a>
+			    </li>
+			    @endif
                     @endauth
                 @endif
             </ul>

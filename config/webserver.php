@@ -110,7 +110,7 @@ return [
         /**
          * The php sock to be used.
          */
-        'php-sock' => 'fastcgi_pass unix:/Users/jodycastro/.valet/valet.sock',
+        'php-sock' => 'unix:/var/run/php/php7.3-fpm.sock',
 
         /**
          * Define the ports of your nginx service.
@@ -154,7 +154,7 @@ return [
              * Location where vhost configuration files can be found.
              */
             'vhost-files' => [
-                '/usr/local/etc/nginx/sites-enabled/'
+                '/etc/nginx/sites-enabled/'
             ],
 
             /**
@@ -164,23 +164,20 @@ return [
                 /**
                  * Action that asserts nginx is installed.
                  */
-                // 'exists' => '/etc/init.d/nginx',
-                'exists' => '/usr/local/bin/nginx',
+                'exists' => '/etc/init.d/nginx',
                 /**
                  * Action to run to test the nginx configuration.
                  *
                  * @info set to a boolean to force the response of the test command.
                  *  true succeeds, false fails
                  */
-                // 'test-config' => '/etc/init.d/nginx configtest',
-                'test-config' => '/usr/local/bin/nginx -t',
+                'test-config' => '/etc/init.d/nginx configtest',
                 /**
                  * Action to run to reload the nginx service.
                  *
                  * @info set to null to disable reloading.
                  */
-                // 'reload' => '/etc/init.d/nginx reload'
-                'reload' => '/usr/local/bin/nginx -s reload'
+                'reload' => '/etc/init.d/nginx reload'
             ]
         ]
     ]

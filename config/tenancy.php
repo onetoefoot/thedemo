@@ -15,6 +15,11 @@
 use Hyn\Tenancy\Database\Connection;
 
 return [
+    /**
+     * Random key used for tenant database user password
+     */
+    'key' => env('TENANCY_KEY', env('APP_KEY')),
+
     'models' => [
         /**
          * Specify different models to be used for the global, system database
@@ -29,6 +34,17 @@ return [
 
         // Must implement \Hyn\Tenancy\Contracts\Website
         'website' => \Hyn\Tenancy\Models\Website::class
+    ],
+    /**
+     * The package middleware. Removing a middleware here will disable it.
+     * You can of course extend/replace them or add your own.
+     */
+    'middleware' => [
+        // The eager identification middleware.
+        \Hyn\Tenancy\Middleware\EagerIdentification::class,
+
+        // The hostname actions middleware (redirects, https, maintenance).
+        \Hyn\Tenancy\Middleware\HostnameActions::class,
     ],
     'website' => [
         /**
@@ -94,7 +110,7 @@ return [
          * @see
          * @info set to true to enable.
          */
-        'auto-delete-tenant-directory' => env('AUTO_DELETE_TENANT_DIRECTORY', false),
+        'auto-delete-tenant-directory' => false,
 
         /**
          * Time to cache websites in minutes. Set to false to disable.
@@ -134,7 +150,7 @@ return [
          * Abort application execution in case no hostname was identified. This will throw a
          * 404 not found in case the tenant hostname was not resolved.
          */
-        'abort-without-identified-hostname' => true,
+        'abort-without-identified-hostname' => env('TENANCY_ABORT_WITHOUT_HOSTNAME', false),
 
         /**
          * Time to cache hostnames in minutes. Set to false to disable.
@@ -148,7 +164,7 @@ return [
          * This will resolve issues with password reset mails etc using the
          * correct domain.
          */
-        'update-app-url' => env('TENANCY_UPDATE_APP_URL', false),
+        'update-app-url' => true,
     ],
     'db' => [
         /**
@@ -173,8 +189,11 @@ return [
         /**
          * The tenant division mode specifies to what database websites will be
          * connecting. The default setup is to use a new database per tenant.
+         * If using PostgreSQL, a new schema per tenant in the same database can
+         * be setup, by optionally setting division mode to 'schema'.
          * In case you prefer to use the same database with a table prefix,
          * set the mode to 'prefix'.
+         * To implement a custom division mode, set this to 'bypass'.
          *
          * @see src/Database/Connection.php
          */
@@ -205,6 +224,7 @@ return [
          * running artisan commands that fire seeding.
          *
          * @info requires tenant-migrations-path in order to seed newly created websites.
+         * @info seeds stored in `database/seeds/tenants` need to be configured in your composer.json classmap.
          *
          * @warn specify a valid fully qualified class name.
          */
@@ -230,6 +250,19 @@ return [
          * @info set to false to disable.
          */
         'auto-create-tenant-database-user' => true,
+
+        /**
+         * Set of database privileges to give to the tenant database user.
+         *
+         * @info Useful in case your database restricts the privileges you
+         *       can set (for example AWS RDS).
+         * @info These privileges are only used in case tenant database users
+         *       are set to be created.
+         *
+         * @info null by default means "ALL PRIVILEGES". Override with a list
+         *       of privileges as a string, e.g. 'SELECT, UPDATE'.
+         */
+        'tenant-database-user-privileges' => null,
 
         /**
          * Automatically rename the tenant database when the random id of the
@@ -357,7 +390,7 @@ return [
         ],
         'views' => [
             /**
-             * Adds the vendor directory of the tenant inside the application.
+             * Enables reading views from tenant directories.
              */
             'enabled' => true,
 
@@ -371,7 +404,7 @@ return [
 
             /**
              * If `namespace` is set to null (thus using the global namespace)
-             * make it override the global views. Disable to
+             * make it override the global views. Disable by setting to false.
              */
             'override-global' => true,
         ]

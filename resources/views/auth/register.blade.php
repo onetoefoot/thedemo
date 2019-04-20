@@ -8,6 +8,19 @@
                         @csrf
 
                         <div class="form-group">
+                            <label class="text-normal text-dark">{{ __('FQDN') }}</label>
+                            <input id="fqdn" type="text" class="form-control{{ $errors->has('fqdn') ? ' is-invalid' : '' }}" 
+                                name="fqdn" value="{{ old('fqdn') }}" required autofocus>
+
+                            @if ($errors->has('fqdn'))
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $errors->first('fqdn') }}</strong>
+                                </span>
+                            @endif
+
+                        </div>
+
+                        <div class="form-group">
                             <label class="text-normal text-dark">{{ __('Name') }}</label>
                             <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" 
                                 name="name" value="{{ old('name') }}" required autofocus>
@@ -19,6 +32,7 @@
                             @endif
 
                         </div>
+
                         <div class="form-group">
                             <label class="text-normal text-dark">{{ __('E-Mail Address') }}</label>
                             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" 
