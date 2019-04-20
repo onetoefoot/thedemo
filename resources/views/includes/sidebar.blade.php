@@ -1,5 +1,5 @@
       <!-- #Left Sidebar ==================== -->
-      <div class="sidebar">
+      <div class="sidebar" id="sidebar">
         <div class="sidebar-inner">
           <!-- ### $Sidebar Header ### -->
           <div class="sidebar-logo">

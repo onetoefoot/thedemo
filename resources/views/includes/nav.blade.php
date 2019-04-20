@@ -1,5 +1,5 @@
         <!-- ### $Topbar ### -->
-        <div class="header navbar">
+        <div class="header navbar" id="header-navbar">
           <div class="header-container">
             <ul class="nav-left">
               <li>

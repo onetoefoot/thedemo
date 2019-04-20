@@ -13,6 +13,8 @@
 
 // Landing Page Routes
 Route::get('/', function () { return view('welcome'); });
+Route::get('/terms', function () { return view('terms'); });
+Route::get('/privacy', function () { return view('privacy'); });
 
 Route::domain('www.noeler.com')->group(function () { 
 
