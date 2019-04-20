@@ -30,9 +30,5 @@ class AuthServiceProvider extends ServiceProvider
             Passport::routes();
         });
 
-        Passport::tokensCan([
-            'sample-identifier' => 'Sample Identifier'
-        ]);
-
     }
 }

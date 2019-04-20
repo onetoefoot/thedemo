@@ -45,7 +45,6 @@
                 <span class="icon-holder">
                   <i class="c-grey-900 ti-view-list-alt"></i>
                 </span>
-                <span class="title">{{__('Sample Identifier')}}</span>
               </a>
             </li>
             
