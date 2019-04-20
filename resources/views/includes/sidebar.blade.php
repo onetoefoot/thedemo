@@ -39,14 +39,6 @@
                 <span class="title">{{ __('Dashboard') }}</span>
               </a>
             </li>
-
-            <li class="nav-item">
-              <a class='sidebar-link' href="{{ url('/sampleidentifier') }} ">
-                <span class="icon-holder">
-                  <i class="c-grey-900 ti-view-list-alt"></i>
-                </span>
-              </a>
-            </li>
             
             <li class="nav-item dropdown">
               <a class="dropdown-toggle" href="javascript:void(0);">
