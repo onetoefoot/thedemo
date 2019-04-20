@@ -7,7 +7,7 @@
             <div class="container masonry-item col-md-8 profile">
                 <div class="bgc-white p-20 bd">
                     <h4 class="c-grey-900">
-                        <i class="ti-key"></i> {{ __('Add Role') }} 
+                    <i class="material-icons">lock</i> {{ __('Add Role') }} 
                         <a href="{{ route('roles.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('Cancel')}}</a>
                     </h4>
                     <div class="mT-30">

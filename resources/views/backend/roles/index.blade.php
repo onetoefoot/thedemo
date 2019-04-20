@@ -8,7 +8,7 @@
     <div class="col-md-12">
         <div class="bgc-white bd bdrs-3 p-20 mB-20">
         <h4 class="c-grey-900 mB-20">
-            <i class="ti-key"></i> {{ __('Roles')}} 
+        <i class="material-icons">lock</i> {{ __('Roles')}} 
             <a href="{{ route('users.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('Users')}}</a>
             <a href="{{ route('permissions.index') }}" class="form-a-link pl-4 pull-right c-grey-700">{{__('Permissions')}}</a>
         </h4>
